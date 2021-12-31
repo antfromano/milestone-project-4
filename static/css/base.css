@@ -5,6 +5,7 @@ html {
 body {
     background: url('/media/homepage_background.jpg') no-repeat center center fixed;
     background-size: cover;
+    backdrop-filter: blur(2.5px);
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Balsamiq Sans', cursive;
@@ -19,16 +20,12 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-}
-
 .main-logo-link {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
+.explore-works-button {
+    background: darkgray;
     color: white;
     min-width: 260px;
 }
@@ -38,9 +35,9 @@ body {
     color: white;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.explore-works-button:hover,
+.explore-works-button:active,
+.explore-works-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
