@@ -45,8 +45,16 @@ body {
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
+.text-green {
+    color: green !important;
+}
+
+.text-red {
+    color: red !important;
+}
+
+.text-blue {
+    color: blue !important;
 }
 
 .border-black {
