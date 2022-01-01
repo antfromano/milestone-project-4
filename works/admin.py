@@ -7,6 +7,7 @@ class WorkAdmin(admin.ModelAdmin):
     list_display = (
         'content',
         'name',
+        'price',
         'rating',
         'image',
     )

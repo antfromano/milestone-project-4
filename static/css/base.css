@@ -6,7 +6,7 @@ body {
     background: url('/media/homepage_background.jpg') no-repeat center center fixed;
     background-size: cover;
     backdrop-filter: blur(2.5px);
-    height: calc(100vh - 164px);
+    position: relative;
     color: #555;
     font-family: 'Balsamiq Sans', cursive;
 }
@@ -59,6 +59,16 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background: white;
+	z-index: -1;
 }
 
 /* -------------------------------- Media Queries */
