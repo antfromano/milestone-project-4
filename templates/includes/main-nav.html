@@ -17,10 +17,10 @@
                 By Content
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="content-link">
-                <a href="" class="dropdown-item">Animals</a>
-                <a href="" class="dropdown-item">Flowers</a>
-                <a href="" class="dropdown-item">Fruit</a>
-                <a href="" class="dropdown-item">Landscapes</a>
+                <a href="{% url 'works' %}?content=Animals" class="dropdown-item">Animals</a>
+                <a href="{% url 'works' %}?content=Flowers" class="dropdown-item">Flowers</a>
+                <a href="{% url 'works' %}?content=Fruit" class="dropdown-item">Fruit</a>
+                <a href="{% url 'works' %}?content=Landscapes" class="dropdown-item">Landscapes</a>
             </div>
         </li>
     </ul>

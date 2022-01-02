@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Work
+from .models import Work, Content
 
 # Create your views here.
 
@@ -10,8 +10,15 @@ def all_works(request):
 
     works = Work.objects.all()
     query = None
-    
+    contents = None
+
     if request.GET:
+
+        if 'content' in request.GET:
+            contents = request.GET['content'].split(',')
+            works = works.filter(content__name__in=contents)
+            contents = Content.objects.filter(name__in=contents)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -24,6 +31,7 @@ def all_works(request):
     context = {
         'works': works,
         'search_term': query,
+        'current_contents': contents,
     }
 
     return render(request, 'works/works.html', context)
