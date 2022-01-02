@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Content(models.Model):
 
     class Meta:
@@ -9,6 +10,7 @@ class Content(models.Model):
     
     def __str__(self):
         return self.name
+
 
 class Work(models.Model):
 
