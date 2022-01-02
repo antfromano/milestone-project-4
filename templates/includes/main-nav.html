@@ -5,8 +5,8 @@
                 All Works
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-works-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'works' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'works' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'works' %}" class="dropdown-item">All Works</a>
             </div>
         </li>

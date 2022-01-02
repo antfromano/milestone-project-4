@@ -11,8 +11,20 @@ def all_works(request):
     works = Work.objects.all()
     query = None
     contents = None
+    sort = None
+    direction = None
 
     if request.GET:
+
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+                
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            works = works.order_by(sortkey)
 
         if 'content' in request.GET:
             contents = request.GET['content'].split(',')
