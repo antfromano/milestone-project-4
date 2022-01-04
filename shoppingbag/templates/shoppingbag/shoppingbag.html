@@ -24,6 +24,7 @@
         <div class="col">
             {% if shoppingbag_items %}
                 <div class="table-responsive rounded"></div>
+                {{ shoppingbag_items }}
             {% else %}
                 <p class="lead mb-5">...is empty.</p>
                 <a href="{% url 'works' %}" class="btn btn-outline-black rounded-0 btn-lg">

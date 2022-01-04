@@ -8,7 +8,7 @@ def view_shoppingbag(request):
     return render(request, 'shoppingbag/shoppingbag.html')
 
 def add_to_shoppingbag(request, work_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ Add a quantity of the specified product to the shoppingbag """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
