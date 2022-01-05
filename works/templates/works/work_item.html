@@ -47,10 +47,9 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
-                                    <div class="input-group">
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="5" data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
+                                    <div>
+                                        <input type="number" name="quantity" value="1" data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +60,7 @@
                                     </span>
                                     <span class="text-uppercase">explore works</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Shopping Bag">
+                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Shopping Bag" data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
