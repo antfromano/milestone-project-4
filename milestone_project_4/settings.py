@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'works',
-    'shoppingbag',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -73,7 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'shoppingbag.contexts.shoppingbag_sum',
+                'cart.contexts.cart_sum',
             ],
         },
     },

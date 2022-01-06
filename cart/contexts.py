@@ -3,18 +3,18 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from works.models import Work
 
-def shoppingbag_sum(request):
+def cart_sum(request):
 
-    shoppingbag_items = []
+    cart_items = []
     total = 0
     work_count = 0
-    shoppingbag = request.session.get('shoppingbag', {})
+    cart = request.session.get('cart', {})
 
-    for work_id, quantity in shoppingbag.items():
+    for work_id, quantity in cart.items():
         work = get_object_or_404(Work, pk=work_id)
         total += quantity * work.price
         work_count += quantity
-        shoppingbag_items.append({
+        cart_items.append({
             'work_id': work_id,
             'quantity': quantity,
             'work': work,
@@ -25,7 +25,7 @@ def shoppingbag_sum(request):
     grand_total = delivery + total
     
     context = {
-        'shoppingbag_items': shoppingbag_items,
+        'cart_items': cart_items,
         'total': total,
         'work_count': work_count,
         'delivery': delivery,

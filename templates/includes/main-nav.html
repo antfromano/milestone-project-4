@@ -2,24 +2,24 @@
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-works-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Works
+                all works
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-works-link">
-                <a href="{% url 'works' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'works' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'works' %}" class="dropdown-item">All Works</a>
+                <a href="{% url 'works' %}?sort=price&direction=asc" class="dropdown-item">by price</a>
+                <a href="{% url 'works' %}?sort=rating&direction=desc" class="dropdown-item ">by rating</a>
+                <a href="{% url 'works' %}" class="dropdown-item">all works</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="content-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                By Content
+                by content
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="content-link">
-                <a href="{% url 'works' %}?content=Animals" class="dropdown-item">Animals</a>
-                <a href="{% url 'works' %}?content=Flowers" class="dropdown-item">Flowers</a>
-                <a href="{% url 'works' %}?content=Fruit" class="dropdown-item">Fruit</a>
-                <a href="{% url 'works' %}?content=Landscapes" class="dropdown-item">Landscapes</a>
+                <a href="{% url 'works' %}?content=animals" class="dropdown-item">animals</a>
+                <a href="{% url 'works' %}?content=flowers" class="dropdown-item">flowers</a>
+                <a href="{% url 'works' %}?content=fruit" class="dropdown-item">fruit</a>
+                <a href="{% url 'works' %}?content=landscapes" class="dropdown-item">landscapes</a>
             </div>
         </li>
     </ul>
