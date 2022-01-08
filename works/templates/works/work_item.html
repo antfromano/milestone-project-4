@@ -47,8 +47,12 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <div class="form-group w-50">
-                                    <div>
+                                <div class="form-group w-50">                                     
+                                    {% if is_sold %}
+                                    <div><p class="mb-0">sold</p>    
+                                    {% else %}
+                                    <div><p class="mb-0">available</p> 
+                                    {% endif %}                                    
                                         <input type="number" name="quantity" value="1" data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
                                     </div>
                                 </div>

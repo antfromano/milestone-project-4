@@ -7,6 +7,7 @@ class WorkAdmin(admin.ModelAdmin):
         'name',
         'price',
         'rating',
+        'is_sold',
         'image',
     )
 
