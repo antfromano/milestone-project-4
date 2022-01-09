@@ -32,33 +32,6 @@ def add_to_cart(request, work_id):
     return redirect(redirect_url)
 
 
-def adjust_cart(request, work_id):
-
-    work = get_object_or_404(Work, pk=work_id)
-    quantity = int(request.POST.get('quantity'))
-    cart = request.session.get('cart', {})
-
-    if quantity:
-        if quantity > 0:
-            cart[work_id] = quantity
-            messages.success(request, f'updated {work.name} quantity to {cart[work_id]}')
-        else:
-            del cart[work_id]
-            if not cart[work_id]:
-                cart.pop(work_id)
-            messages.success(request, f'removed {work.name} from your cart')
-    else:
-        if quantity > 0:
-            cart[work_id] = quantity
-            messages.success(request, f'updated {work.name} quantity to {cart[work_id]}')
-        else: 
-            cart.pop(work_id)
-            messages.success(request, f'removed {work.name} from your cart')
-
-        request.session['cart'] = cart
-        return redirect(reverse('view_cart'))
-
-
 def remove_from_cart(request, work_id):
     """Remove the item from the cart"""
 

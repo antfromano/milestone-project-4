@@ -31,11 +31,10 @@
                             <th scope="col"></th>
                             <th scope="col">Name</th>
                             <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
+                            <th scope="col"></th>
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
-
                     {% for item in cart_items %}
                         <tr>
                             <td class="p-3 w-25">
@@ -49,14 +48,7 @@
                                 <p class="my-0">${{ item.work.price }}</p>
                             </td>
                             <td class="py-3 w-25">
-                                <form class = "form update-form" method="POST" action="{{% url 'adjust_cart' item.work.id %">
-                                    {% csrf_token %}
-                                    <div class="form-group w-50">
-                                        <div class="input-group">
-                                            <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="5" data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
-                                        </div>
-                                    </div>
-                                </form>
+                                
                                 <a class="remove-item text-danger float-right" id="remove_{{ item.work_id }}"><small>Remove</small></a>
                             </td>
                             <td class="py-3">
