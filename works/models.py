@@ -21,7 +21,7 @@ class Work(models.Model):
                                  on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
-    is_sold = models.BooleanField()
+    is_sold = models.BooleanField(default=False)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True,
                                  blank=True)
