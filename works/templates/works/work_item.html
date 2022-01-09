@@ -49,9 +49,9 @@
                             <div class="col-12">
                                 <div class="form-group w-50" method="GET">                                     
                                     {% if work.is_sold %}
-                                    <div><p class="mb-0">sold</p>    
+                                    <div><p class="text-red mb-0">sold - new items will be arriving shortly</p>    
                                     {% else %}
-                                    <div><p class="mb-0">available</p> 
+                                    <div><p class="text-green mb-0">available</p> 
                                     {% endif %}                                                                       
                                     </div>
                                 </div>
@@ -63,13 +63,11 @@
                                     </span>
                                     <span class="text">explore works</span>
                                 </a>
-                                    {% if work.is_sold %}
-                                    <input type="submit" class="btn btn-black rounded-0 text mt-5" value="go to shopping cart" data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">  
-                                    {% else %}
+                                    {% if not work.is_sold %}                                
                                     <input type="submit" class="btn btn-black rounded-0 text mt-5" value="add to shopping cart" data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}"data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
                                     {% endif %}
                             </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}"data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
                         </div>
                     </form>                    
 

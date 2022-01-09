@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Work, Content
 
+
 # Create your views here.
 
 def all_works(request):
