@@ -16,7 +16,7 @@ def add_to_cart(request, work_id):
     """ Add a quantity of the specified work to the cart """
 
     work = get_object_or_404(Work, pk=work_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = 1
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
