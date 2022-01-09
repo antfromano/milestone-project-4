@@ -3,51 +3,37 @@ from django.contrib import messages
 
 from works.models import Work
 
-# Create your views here.
-
 
 def view_cart(request):
-    """ view that renders cart page """
+    """ view to render cart page """
 
     return render(request, 'cart/cart.html')
 
 
 def add_to_cart(request, work_id):
-    """ Add a quantity of the specified work to the cart """
+    """ add specified work to cart """
 
     work = get_object_or_404(Work, pk=work_id)
     quantity = 1
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
-    if work_id in list(cart.keys()):
-        cart[work_id] += quantity
-        messages.success(request, f'updated {work.name} quantity to {cart[work_id]}')
-
-    else:
-        cart[work_id] = quantity
-        messages.success(request, f'added {work.name} to your cart')
+    cart[work_id] = quantity
+    messages.success(request, f'added {work.name} to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
 
 
 def remove_from_cart(request, work_id):
-    """Remove the item from the cart"""
+    """ remove work from cart"""
 
     try:
         work = get_object_or_404(Work, pk=work_id)
-        quantity = int(request.POST.get('quantity'))
         cart = request.session.get('cart', {})
 
-        if quantity > 0:
-            del cart[work_id]
-            if not cart[work_id]:
-                cart.pop(work_id)
-            messages.success(request, f'removed {work.name} from your cart')
-        else:
-            cart.pop(work_id)
-            messages.success(request, f'removed {work.name} from your cart')
+        cart.pop(work_id)
+        messages.success(request, f'removed {work.name} from your cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
