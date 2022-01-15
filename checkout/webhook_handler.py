@@ -1,5 +1,10 @@
 from django.http import HttpResponse
 
+from .models import Order, OrderLineItem
+from works.models import Work
+
+import json
+import time
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
@@ -92,7 +97,7 @@ class StripeWH_Handler:
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]}',
+            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):
