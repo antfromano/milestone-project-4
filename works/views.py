@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Work, Content
-
+from .forms import WorkForm
 
 # Create your views here.
 
@@ -60,3 +60,14 @@ def work_item(request, work_id):
     }
 
     return render(request, 'works/work_item.html', context)
+
+
+def add_work(request):
+    """ Add a product to the store """
+    form = WorkForm()
+    template = 'works/add_work.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
