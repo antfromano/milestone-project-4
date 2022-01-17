@@ -63,8 +63,18 @@ def work_item(request, work_id):
 
 
 def add_work(request):
-    """ Add a product to the store """
-    form = WorkForm()
+    """ Add a work to the store """
+    if request.method == 'POST':
+        form = WorkForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'successfully added work!')
+            return redirect(reverse('add_work'))
+        else:
+            messages.error(request, 'failed to add work. please ensure the form is valid.')
+    else:
+        form = WorkForm()
+    
     template = 'works/add_work.html'
     context = {
         'form': form,

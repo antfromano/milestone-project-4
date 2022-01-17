@@ -41,9 +41,9 @@
                         <div class="col-2 mb-1">
                             <a href="{% url 'work_item' item.work.id %}">
                                 {% if item.work.image %}
-                                    <img class="w-100" src="{{ item.work.image.url }}" alt="{{ work.name }}">
+                                    <img class="w-100" src="{{ item.work.image.url }}" alt="{{ item.work.name }}">
                                 {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ work.name }}">
+                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.work.name }}">
                                 {% endif %}
                             </a>
                         </div>

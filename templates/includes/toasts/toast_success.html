@@ -16,6 +16,13 @@
         </div>
         {% if grand_total and not on_profile_page %}
             <div class="row">
+                <div class="col-3 my-1">
+                    {% if work.image %}
+                    <img class="w-100" src="{{ work.image.url }}" alt="{{ item.work.name }}">
+                    {% else %}
+                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.work.name }}">
+                    {% endif %}
+                </div>
                 <div class="col">                    
                     <a href="{% url 'view_cart' %}" class="btn btn-black btn-block rounded-0">
                         <span>go to secure checkout</span>
