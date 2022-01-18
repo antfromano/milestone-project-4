@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Content(models.Model):
 
@@ -23,8 +23,8 @@ class Work(models.Model):
     description = models.TextField()
     is_sold = models.BooleanField(default=False)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True,
-                                 blank=True)
+    rating = models.IntegerField(null=True, blank=True, default=1, validators=[
+                                 MaxValueValidator(5), MinValueValidator(1)])
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
