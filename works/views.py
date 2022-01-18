@@ -67,9 +67,9 @@ def add_work(request):
     if request.method == 'POST':
         form = WorkForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            work = form.save()
             messages.success(request, 'successfully added work!')
-            return redirect(reverse('add_work'))
+            return redirect(reverse('work_item', args=[work.id]))
         else:
             messages.error(request, 'failed to add work. please ensure the form is valid.')
     else:
@@ -104,3 +104,10 @@ def edit_work(request, work_id):
     }
 
     return render(request, template, context)
+
+def delete_work(request, work_id):
+    """ Delete a product from the store """
+    work = get_object_or_404(Work, pk=work_id)
+    work.delete()
+    messages.success(request, 'work deleted!')
+    return redirect(reverse('works'))
