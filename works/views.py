@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Work, Content
 from .forms import WorkForm
@@ -62,8 +63,13 @@ def work_item(request, work_id):
     return render(request, 'works/work_item.html', context)
 
 
+@login_required
 def add_work(request):
     """ Add a work to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = WorkForm(request.POST, request.FILES)
         if form.is_valid():
@@ -82,8 +88,14 @@ def add_work(request):
 
     return render(request, template, context)
 
+
+@login_required
 def edit_work(request, work_id):
     """ Edit a work in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     work = get_object_or_404(Work, pk=work_id)
     if request.method == 'POST':
         form = WorkForm(request.POST, request.FILES, instance=work)
@@ -105,8 +117,14 @@ def edit_work(request, work_id):
 
     return render(request, template, context)
 
+
+@login_required
 def delete_work(request, work_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+        
     work = get_object_or_404(Work, pk=work_id)
     work.delete()
     messages.success(request, 'work deleted!')
