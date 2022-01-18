@@ -81,3 +81,26 @@ def add_work(request):
     }
 
     return render(request, template, context)
+
+def edit_work(request, work_id):
+    """ Edit a work in the store """
+    work = get_object_or_404(Work, pk=work_id)
+    if request.method == 'POST':
+        form = WorkForm(request.POST, request.FILES, instance=work)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'successfully updated work!')
+            return redirect(reverse('work_item', args=[work.id]))
+        else:
+            messages.error(request, 'failed to update work. please ensure the form is valid.')
+    else:
+        form = WorkForm(instance=work)
+        messages.info(request, f'you are editing {work.name}')
+
+    template = 'works/edit_work.html'
+    context = {
+        'form': form,
+        'work': work,
+    }
+
+    return render(request, template, context)
