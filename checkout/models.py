@@ -4,6 +4,7 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 from works.models import Work
+from milestone_project_4.settings import STANDARD_DELIVERY_PERCENTAGE
 
 from profiles.models import UserProfile
 
@@ -53,6 +54,7 @@ class Order(models.Model):
         accounting for delivery_cost costs.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 

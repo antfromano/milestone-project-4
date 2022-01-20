@@ -158,7 +158,9 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    # is_sold.update(active=True)
+    line_items = OrderLineItem.objects.filter(order=order_number)
+    for work_id, is_sold in order_number():
+        is_sold.update(active=True)                
 
     messages.success(request, f'order successfully processed! \
         your order number is {order_number}. a confirmation \
