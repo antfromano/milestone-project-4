@@ -29,10 +29,10 @@
                     <thead class="text-black">
                         <tr>
                             <th scope="col"></th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Price</th>
+                            <th scope="col">name</th>
+                            <th scope="col">price</th>
                             <th scope="col"></th>
-                            <th scope="col">Subtotal</th>
+                            <th scope="col">subtotal</th>
                         </tr>
                     </thead>
                     {% for item in cart_items %}
@@ -53,7 +53,7 @@
                             </td>
                             <td class="py-3 w-25">
                                 
-                                <a class="remove-item text-danger float-right" id="remove_{{ item.work_id }}"><small>Remove</small></a>
+                                <a class="remove-item text-danger float-right" id="remove_{{ item.work_id }}"><small>remove</small></a>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">${{ item.work.price | calc_subtotal:item.quantity }}</p>
@@ -63,7 +63,7 @@
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong>cart total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                            <h6>delivery: ${{ delivery_cost|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>grand total: ${{ grand_total|floatformat:2 }}</strong></h4>
                         </td>
                     </tr>

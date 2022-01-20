@@ -20,15 +20,15 @@ def cart_sum(request):
             'work': work,
         })
     
-    delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+    delivery_cost = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
 
-    grand_total = delivery + total
+    grand_total = delivery_cost + total
     
     context = {
         'cart_items': cart_items,
         'total': total,
         'work_count': work_count,
-        'delivery': delivery,
+        'delivery_cost': delivery_cost,
         'grand_total': grand_total,
     }
 

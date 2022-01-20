@@ -4,7 +4,9 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 from works.models import Work
+
 from profiles.models import UserProfile
+
 
 # Create your models here.
 
@@ -48,7 +50,7 @@ class Order(models.Model):
     def update_total(self):
         """
         Update grand total each time a line item is added,
-        accounting for delivery costs.
+        accounting for delivery_cost costs.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.grand_total = self.order_total + self.delivery_cost

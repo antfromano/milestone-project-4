@@ -8,7 +8,8 @@ from .models import Order, OrderLineItem
 from works.models import Work
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
-from cart.contexts import cart_sum 
+from cart.contexts import cart_sum
+
 
 import stripe
 import json
@@ -157,7 +158,7 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    # add sold/avail 
+    # is_sold.update(active=True)
 
     messages.success(request, f'order successfully processed! \
         your order number is {order_number}. a confirmation \
