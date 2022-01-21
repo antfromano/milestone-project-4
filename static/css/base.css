@@ -34,8 +34,8 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
+.btn-gray {
+    background: darkgray;
     color: white;
 }
 
@@ -55,10 +55,10 @@ body {
 .explore-works-button:hover,
 .explore-works-button:active,
 .explore-works-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
+.btn-gray:hover,
+.btn-gray:active,
+.btn-gray:focus {
+    background: darkgray;
     color: white;
 }
 
