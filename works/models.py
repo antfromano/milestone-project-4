@@ -11,7 +11,6 @@ class Content(models.Model):
     def __str__(self):
         return self.name
 
-
 class Work(models.Model):
 
     class Meta:
