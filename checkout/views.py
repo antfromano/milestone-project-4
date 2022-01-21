@@ -58,6 +58,8 @@ def checkout(request):
             for work_id, work_data in cart.items():
                 try:
                     work = Work.objects.get(id=work_id)
+                    work.is_sold = True
+                    work.save()
                     if isinstance(work_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
@@ -157,11 +159,7 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-
-    line_items = OrderLineItem.objects.filter(order=order_number)
-    for work_id, is_sold in order_number():
-        is_sold.update(active=True)                
-
+                        
     messages.success(request, f'order successfully processed! \
         your order number is {order_number}. a confirmation \
         email will be sent to {order.email}.')
