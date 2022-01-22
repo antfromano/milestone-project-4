@@ -1,22 +1,20 @@
 Hello {{ order.full_name }}!
 
-This is a confirmation of your order at ancraft. Your order information is below:
+Thank you for your order from ancraft. Your order information is below:
 
-Order Number: {{ order.order_number }}
-Order Date: {{ order.date }}
+order number: {{ order.order_number }}
+order date: {{ order.date }}
 
-Order Total: ${{ order.order_total }}
-Delivery: ${{ order.delivery_cost }}
-Grand Total: ${{ order.grand_total }}
+order total: ${{ order.order_total }}
+delivery: ${{ order.delivery_cost }}
+grand total: ${{ order.grand_total }}
 
 Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.state }}.
 
-We've got your phone number on file as {{ order.phone_number }}.
+Please feel free to contact us with any questions at {{ contact_email }}.
 
-If you have any questions, feel free to contact us at {{ contact_email }}.
+Thank you again!
 
-Thank you for your order!
-
-Sincerely,
+Kind regards,
 
 ancraft

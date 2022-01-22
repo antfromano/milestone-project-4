@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- checkout_success block content -->
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
@@ -13,18 +14,19 @@
     </div>
 {% endblock %}
 
+<!-- checkout_success block content injected into base.html -->
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">thank you</h2>
+                <h2 class="logo-font mb-4">thank you!</h2>
                 <hr>
-                <p class="text-green-alt">order information is below.  a confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                <p class="text-green-alt">order information below.  confirmation email sent to: <strong>{{ order.email }}</strong></p>
             </div>
         </div>
-
+         <!-- order information -->
         <div class="row">
             <div class="col-12 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
@@ -57,7 +59,7 @@
                             <small class="text-muted">order details:</small>
                         </div>
                     </div>
-
+                    <!-- for loop to go through each item in cart -->
                     {% for item in order.lineitems.all %}
                     <div class="row">
                         <div class="col-12 col-md-4">
@@ -70,10 +72,10 @@
                         </div>
                     </div>
                     {% endfor %}
-
+                    <!-- delivery information -->
                     <div class="row">
                         <div class="col">
-                            <small class="text-muted">delivering to:</small>
+                            <small class="text-muted">delivery info:</small>
                         </div>
                     </div>
 
@@ -141,7 +143,7 @@
                             <p class="mb-0">{{ order.phone_number }}</p>
                         </div>
                     </div>
-
+                    <!-- order billing information -->
                     <div class="row">
                         <div class="col">
                             <small class="text-muted">billing info:</small>
@@ -181,6 +183,7 @@
         </div>
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
+                <!-- back to profile -->
                 {% if from_profile %}
                     <a href="{% url 'profile' %}" class="btn btn-primary rounded-0 my-2">
                         <span class="icon mr-2">
@@ -189,6 +192,7 @@
                         <span>back to profile</span>
                     </a>
                 {% else %}
+                <!-- back to all works -->
 				<a href="{% url 'works' %}" class="btn btn-primary rounded-0 my-2">
 					<span class="icon mr-2">
 						<i class="far fa-images"></i>

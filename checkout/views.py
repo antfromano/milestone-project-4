@@ -10,10 +10,9 @@ from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from cart.contexts import cart_sum
 
-
 import stripe
 import json
-# Create your views here.
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -142,11 +141,11 @@ def checkout_success(request, order_number):
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
-        # Attach the user's profile to the order
+        # attach the user's profile to the order
         order.user_profile = profile
         order.save()
 
-        # Save the user's info
+        # save the user's info
         if save_info:
             profile_data = {
                 'default_street_address1': order.street_address1,
@@ -160,9 +159,9 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
                         
-    messages.success(request, f'order successfully processed! \
-        your order number is {order_number}. a confirmation \
-        email will be sent to {order.email}.')
+    messages.success(request, f'order successfully processed with order number: \
+        {order_number} \
+        confirmation email sent to: {order.email}.')
 
     if 'cart' in request.session:
         del request.session['cart']

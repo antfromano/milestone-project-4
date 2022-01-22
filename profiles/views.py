@@ -39,8 +39,8 @@ def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
-        f'this is a past confirmation for order number {order_number}. '
-        'a confirmation email was sent previously.'
+        f'this is a past confirmation for order number: {order_number} '
+        'confirmation email was sent previously.'
     ))
 
     template = 'checkout/checkout_success.html'

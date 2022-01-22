@@ -3,13 +3,11 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+
 from works.models import Work
 from milestone_project_4.settings import STANDARD_DELIVERY_PERCENTAGE
-
 from profiles.models import UserProfile
 
-
-# Create your models here.
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -32,13 +30,13 @@ class Order(models.Model):
 
     def _generate_order_number(self):
         """
-        Generate a random, unique order number using UUID
+        generate random, unique order number using UUID
         """
         return uuid.uuid4().hex.upper()
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the order number
+        override original save method to set order number
         if it hasn't been set already.
         """
         if not self.order_number:
@@ -50,8 +48,8 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Update grand total each time a line item is added,
-        accounting for delivery_cost costs.
+        update grand total each time line item is added
+        to account for delivery_cost costs.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
@@ -66,8 +64,8 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the lineitem total
-        and update the order total.
+        override original save method to set lineitem total
+        and update order total.
         """
         self.lineitem_total = self.work.price * self.quantity
         super().save(*args, **kwargs)
