@@ -7,6 +7,7 @@ body {
     font-family: 'Balsamiq Sans', cursive;
 }
 
+/* background */
 .background {
     background: url('/media/homepage_background.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -28,6 +29,7 @@ body {
     width: fit-content;
 }
 
+/* text colors to match bootstrap default colors */
 .text-green-alt {
     color: #28a745 !important;
 }
@@ -40,10 +42,17 @@ body {
     color: #007bff !important;
 }
 
+/* border color to match bootstrap default color */
+.border-green-alt {
+    border: 1px solid #28a745 !important;
+}
+
+/* border color to match bootstrap default color */
 .border-black {
     border: 1px solid black !important;
 }
 
+/* overlay */
 .overlay {
     height: 100vh;
     width: 100%;
@@ -54,6 +63,7 @@ body {
 	z-index: -1;
 }
 
+/* back to top button */
 .btt-button {
     height: 42px;
     width: 42px;
