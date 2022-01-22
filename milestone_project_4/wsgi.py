@@ -1,9 +1,9 @@
 """
 WSGI config for milestone_project_4 project.
 
-It exposes the WSGI callable as a module-level variable named ``application``.
+it exposes the WSGI callable as a module-level variable named ``application``.
 
-For more information on this file, see
+for more information on this file, see
 https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
