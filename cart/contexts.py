@@ -3,12 +3,14 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from works.models import Work
 
+
 def cart_sum(request):
+    """ cart contents available when rendering all pages """
+    cart = request.session.get('cart', {})
 
     cart_items = []
     total = 0
     work_count = 0
-    cart = request.session.get('cart', {})
 
     for work_id, quantity in cart.items():
         work = get_object_or_404(Work, pk=work_id)
