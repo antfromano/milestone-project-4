@@ -6,15 +6,17 @@ from .forms import UserProfileForm
 
 from checkout.models import Order
 
-# Create your views here.
-
 
 @login_required
 def profile(request):
-    """ Display the user's profile. """
+    """
+    display user's profile
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
     orders = profile.orders.all()
-
+    """
+    update user's profile
+    """
     if request.method == "POST":
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -34,7 +36,9 @@ def profile(request):
 
     return render(request, template, context)
 
-
+"""
+order message for user's selected previous order
+"""
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
