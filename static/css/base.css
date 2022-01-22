@@ -28,50 +28,16 @@ body {
     width: fit-content;
 }
 
-.explore-works-button {
-    background: darkgray;
-    color: white;
-    min-width: 260px;
+.text-green-alt {
+    color: #28a745 !important;
 }
 
-.btn-gray {
-    background: darkgray;
-    color: white;
+.text-red-alt {
+    color: #dc3545 !important;
 }
 
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
-}
-
-.explore-works-button:hover,
-.explore-works-button:active,
-.explore-works-button:focus,
-.btn-gray:hover,
-.btn-gray:active,
-.btn-gray:focus {
-    background: darkgray;
-    color: white;
-}
-
-.text-green {
-    color: green !important;
-}
-
-.text-red {
-    color: red !important;
-}
-
-.text-blue {
-    color: blue !important;
+.text-blue-alt {
+    color: #007bff !important;
 }
 
 .border-black {

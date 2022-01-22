@@ -42,7 +42,7 @@
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'works' %}" class="nav-link main-logo-link">
-            <h2 class="logo-font text-green my-0">ancraft</h2>
+            <h2 class="logo-font text-green-alt my-0">ancraft</h2>
           </a>
         </div>
       <!-- Form -->
@@ -51,7 +51,7 @@
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="explore works">
                 <div class="input-group-append">
-                    <button class="form-control btn btn-gray border border-black" type="submit">
+                    <button class="form-control btn btn-primary border border-black" type="submit">
                         <span class="icon">
                             <i class="fas fa-search"></i>
                         </span>
@@ -63,7 +63,7 @@
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown">
-              <a class="text-red nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="text-red-alt nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <div><i class="fas fa-user-circle fa-lg"></i></div>
                     <p class="my-0">my account</p>
@@ -83,7 +83,7 @@
               </div>
             </li>
             <li class="list-inline-item">
-              <a class="{% if grand_total %}font-weight-bold{% else %}text-blue{% endif %} nav-link" href="{% url 'view_cart' %}">
+              <a class="{% if grand_total %}font-weight-bold{% else %}text-blue-alt{% endif %} nav-link" href="{% url 'view_cart' %}">
                       <div class="text-center">
                           <div><i class="fas fa-shopping-basket fa-lg"></i></div>
                         {% if grand_total %}
