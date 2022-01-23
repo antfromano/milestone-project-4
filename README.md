@@ -23,17 +23,16 @@ Designed to provide a simple experience for people to purchase unique art while 
         3. As a customer, I want a recognizable and secure checkout experience.
         ![Alt text](img/checkoutscreenshot.jpg)
 
+        4. As a customer, I want an order summary and confirmation.
+        ![Alt text](img/ordersummaryscreenshot.jpg)
+
 -   ### Design
     -   #### Color Scheme
-        -   The main colors used are blue, gray, red and white and appropriate shading and highlighting.
+        -   The main colors used are green, red, blue and white to match the art pieces's color pallette.
     -   #### Typography
-        -   Materialize's standard font is the main font used throughout the whole website with Sans Serif as the fallback font               in case for any reason the font isn't being imported into the site correctly.
+        -   Balsamiq Sans font is the main font used throughout the whole website.
     -   #### Imagery
-        -   Utilized Python, HTML, CSS, JavaScript, Materialize, MongoDB and Heroku.
-
-*   ### Wireframes
-
-    -   The Balsamiq Cloud Wireframe providing framework for development is accessible [here](https://github.com/antfromano/special-slice/blob/main/docs/milestone%20project%203%20balsamiq%20wireframes.pdf)
+        -   Utilized Python, HTML, Python, CSS, JavaScript, Django, Heroku and Amazon S3.
 
 ## Features
 
