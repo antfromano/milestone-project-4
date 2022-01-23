@@ -78,7 +78,7 @@ Lighthouse was also used to validate the project for performance, accessability,
 
 -   [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Desktop Results](https://github.com/antfromano/special-slice/blob/main/docs/lighthouse%20desktop.pdf)
 
--   [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Mobile Results](https://github.com/antfromano/special-slice/blob/main/docs/lighthouse%20mobile.pdf)
+-   [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Mobile Results](docs/lighthouse_mobile_results.pdf)
 
 ### Testing User Stories from User Experience (UX)
 
