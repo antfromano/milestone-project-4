@@ -36,13 +36,13 @@ Designed to provide a simple experience for people to purchase unique art while 
 
 ## Features
 
--   Responsive on all device sizes
+-   Responsive on all device sizes.
 
--   Attractive, efficient and interactive elements
+-   Attractive, efficient and interactive elements.
 
 ## Features Left to Implement/Other Feature Ideas
 
--   Drop down inputs, insert picture, and insert website address.
+-   Customer ability to leave ratings and reviews of art pieces was not implemented due to time constraints complicated by miscommunication between virtual collaborators.
 
 ## Technologies
 
@@ -57,19 +57,17 @@ Designed to provide a simple experience for people to purchase unique art while 
 
 ### Frameworks, Libraries & Programs
 
-1. [Materialize:](https://materializecss.com/)
-    - for structure and layout.
-1. [MongoDB:](https://www.mongodb.com/)
+1. [Django:](https://www.djangoproject.com/)
     - for database.
 1. [Heroku:](https://www.heroku.com/)
     - for deployment.
+1. [Amazon S3:](https://aws.amazon.com/s3/)
+    - for Cloud Object Storage.
 1. [GitHub:](https://github.com/antfromano/special-slice)
     - as a repository, distributed version-control system for tracking changes and to deploy and host final version of code.
 1. [Gitpod:](https://gitpod.io/)
     - as a collaborative development environment.
-1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes]((https://github.com/antfromano/special-slice/blob/main/docs/milestone%20project%203%20balsamiq%20wireframes.pdf)) during the design process.
-    
+
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
