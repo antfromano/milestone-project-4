@@ -1,6 +1,6 @@
 <h1 align="center">Milestone Project 4 - ancraft - Ant Romano</h1>
 
-[View the live project here.](https://mp4ancraft.herokuapp.com/works/)
+[View the live project here](https://mp4ancraft.herokuapp.com/works/)
 
 An art ecommerce designed using Python, HTML, Python, CSS, JavaScript, Django, Heroku and Amazon S3 to highlight skills learned during Full Stack Software Development coursework.
 
@@ -8,20 +8,20 @@ An art ecommerce designed using Python, HTML, Python, CSS, JavaScript, Django, H
 
 ## User Experience (UX)
 
-Designed to provide a simple experience for people to share their favorite pizza while highlighting software development skills.
+Designed to provide a simple experience for people to purchase unique art while highlighting software development skills.
 
 -   ### User stories
 
-    -   #### Pizza Diner
+    -   #### Customer
 
-        1. As a Pizza Diner, I want to share my favorite pizza.
-        ![Alt text](img/homescreenshot.jpg)
+        1. As a customer, I want to browse the available artwork.
+        ![Alt text](img/allworksscreenshot.jpg)
 
-        2. As a Pizza Diner, I want a simple user interface and functional interactivity.
-        ![Alt text](img/addslicescreenshot.JPG)
+        2. As a customer, I want a simple user interface and functional interactivity.
+        ![Alt text](img/singleworkscreenshot.jpg)
         
-        3. As a Pizza Diner, I want a visually appealing experience.
-        ![Alt text](img/updatescreenshot.JPG)
+        3. As a customer, I want a recognizable and secure checkout experience.
+        ![Alt text](img/checkoutscreenshot.jpg)
 
 -   ### Design
     -   #### Color Scheme
