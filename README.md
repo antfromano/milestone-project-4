@@ -57,7 +57,7 @@ Designed to provide a simple experience for people to purchase unique art while 
 
 1. [Django:](https://www.djangoproject.com/)
     - for database.
-    
+
 1. [Heroku:](https://www.heroku.com/)
     - for deployment.
 1. [Amazon S3:](https://aws.amazon.com/s3/)
@@ -71,7 +71,7 @@ Designed to provide a simple experience for people to purchase unique art while 
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://github.com/antfromano/special-slice/blob/main/docs/Showing%20results%20for%20https___special-slice.herokuapp.com_get_complete_slices%20-%20Nu%20Html%20Checker.pdf)
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results](aria-labelledby="user-options")
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://github.com/antfromano/special-slice/blob/main/img/Capture.JPG)
 
 Lighthouse was also used to validate the project for performance, accessability, best practices and SEO.
