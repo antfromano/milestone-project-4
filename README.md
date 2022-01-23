@@ -53,12 +53,11 @@ Designed to provide a simple experience for people to purchase unique art while 
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
- and 
-
 ### Frameworks, Libraries & Programs
 
 1. [Django:](https://www.djangoproject.com/)
     - for database.
+    
 1. [Heroku:](https://www.heroku.com/)
     - for deployment.
 1. [Amazon S3:](https://aws.amazon.com/s3/)
