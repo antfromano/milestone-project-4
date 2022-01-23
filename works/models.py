@@ -29,21 +29,3 @@ class Work(models.Model):
 
     def __str__(self):
         return self.name
-
-class Review(models.Model):
-
-    class Meta:
-        verbose_name_plural = 'Reviews'
-
-    content = models.ForeignKey('Content', null=True, blank=True,
-                                on_delete=models.SET_NULL)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    is_sold = models.BooleanField(default=False)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True, default=1, validators=[
-                                 MaxValueValidator(5), MinValueValidator(1)])
-    image = models.ImageField(null=True, blank=True)
-
-    def __str__(self):
-        return self.name

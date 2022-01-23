@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Work, Content, Review
+from .models import Work, Content
 
 class WorkAdmin(admin.ModelAdmin):
     list_display = (
@@ -12,18 +12,6 @@ class WorkAdmin(admin.ModelAdmin):
     )
 
     ordering = ('content',)
-
-class ReviewAdmin(admin.ModelAdmin):
-    readonly_fields = (
-        'content',
-        'name',
-        'price',
-        'is_sold',
-        'image',
-    )
-    list_display = (
-        'rating',
-    )
 
 admin.site.register(Work, WorkAdmin)
 admin.site.register(Content)

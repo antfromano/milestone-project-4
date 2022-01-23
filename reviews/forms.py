@@ -1,12 +1,13 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Work, Content
+from works.models import Work, Content
+from .models import Review
 
 
-class WorkForm(forms.ModelForm):
-
+class ReviewForm(forms.ModelForm):
+    
     class Meta:
-        model = Work
+        model = Review
         fields = '__all__'
     
     image = forms.ImageField(label='image', required=False, widget=CustomClearableFileInput)
