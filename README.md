@@ -71,7 +71,7 @@ Designed to provide a simple experience for people to purchase unique art while 
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://github.com/antfromano/milestone-project-4/blob/e978329a6493cf5fe322fa6b378b289fe37baadc/docs/Showing results for https___mp4ancraft.herokuapp.com_ - Nu Html Checker.pdf#L1)
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results](docs/Nu_Html_Checker.pdf)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://github.com/antfromano/special-slice/blob/main/img/Capture.JPG)
 
 Lighthouse was also used to validate the project for performance, accessability, best practices and SEO.
