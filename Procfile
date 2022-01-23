@@ -1,1 +1,1 @@
-web: gunicorn mp4ancraft.wsgi:application
+web: gunicorn milestone-project-4.wsgi:application
