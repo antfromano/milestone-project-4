@@ -1,108 +1,188 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Milestone Project 4 - ancraft - Ant Romano</h1>
 
-Welcome antfromano,
+[View the live project here.](https://mp4ancraft.herokuapp.com/works/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+An art ecommerce designed using Python, HTML, Python, CSS, JavaScript, Django, Heroku and Amazon S3 to highlight skills learned during Full Stack Software Development coursework.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<h2 align="center"><img src="img/ancraftmultidevicewebsitemockup.jpg"></h2>
 
-## Gitpod Reminders
+## User Experience (UX)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Designed to provide a simple experience for people to share their favorite pizza while highlighting software development skills.
 
-`python3 -m http.server`
+-   ### User stories
 
-A blue button should appear to click: _Make Public_,
+    -   #### Pizza Diner
 
-Another blue button should appear to click: _Open Browser_.
+        1. As a Pizza Diner, I want to share my favorite pizza.
+        ![Alt text](img/homescreenshot.jpg)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+        2. As a Pizza Diner, I want a simple user interface and functional interactivity.
+        ![Alt text](img/addslicescreenshot.JPG)
+        
+        3. As a Pizza Diner, I want a visually appealing experience.
+        ![Alt text](img/updatescreenshot.JPG)
 
-A blue button should appear to click: _Make Public_,
+-   ### Design
+    -   #### Color Scheme
+        -   The main colors used are blue, gray, red and white and appropriate shading and highlighting.
+    -   #### Typography
+        -   Materialize's standard font is the main font used throughout the whole website with Sans Serif as the fallback font               in case for any reason the font isn't being imported into the site correctly.
+    -   #### Imagery
+        -   Utilized Python, HTML, CSS, JavaScript, Materialize, MongoDB and Heroku.
 
-Another blue button should appear to click: _Open Browser_.
+*   ### Wireframes
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+    -   The Balsamiq Cloud Wireframe providing framework for development is accessible [here](https://github.com/antfromano/special-slice/blob/main/docs/milestone%20project%203%20balsamiq%20wireframes.pdf)
 
-To log into the Heroku toolbelt CLI:
+## Features
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+-   Responsive on all device sizes
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+-   Attractive, efficient and interactive elements
 
-------
+## Features Left to Implement/Other Feature Ideas
 
-## Release History
+-   Drop down inputs, insert picture, and insert website address.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Technologies
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Languages
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+-   [Python](https://en.wikipedia.org/wiki/Python)
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+ and 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Frameworks, Libraries & Programs
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+1. [Materialize:](https://materializecss.com/)
+    - for structure and layout.
+1. [MongoDB:](https://www.mongodb.com/)
+    - for database.
+1. [Heroku:](https://www.heroku.com/)
+    - for deployment.
+1. [GitHub:](https://github.com/antfromano/special-slice)
+    - as a repository, distributed version-control system for tracking changes and to deploy and host final version of code.
+1. [Gitpod:](https://gitpod.io/)
+    - as a collaborative development environment.
+1. [Balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create the [wireframes]((https://github.com/antfromano/special-slice/blob/main/docs/milestone%20project%203%20balsamiq%20wireframes.pdf)) during the design process.
+    
+## Testing
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://github.com/antfromano/special-slice/blob/main/docs/Showing%20results%20for%20https___special-slice.herokuapp.com_get_complete_slices%20-%20Nu%20Html%20Checker.pdf)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://github.com/antfromano/special-slice/blob/main/img/Capture.JPG)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Lighthouse was also used to validate the project for performance, accessability, best practices and SEO.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+-   [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Desktop Results](https://github.com/antfromano/special-slice/blob/main/docs/lighthouse%20desktop.pdf)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+-   [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Mobile Results](https://github.com/antfromano/special-slice/blob/main/docs/lighthouse%20mobile.pdf)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Testing User Stories from User Experience (UX)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+-   #### Pizza Diner Goals
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+    1. As a Pizza Diner, I want to share my favorite pizza.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+        1. Upon entering the site, diners are greeted with a simple title, several pizza slices and an Add Slice button which allows them to add a slice.
+        2. The Add Slice button is immediately noticeable which leads the diner to the appropriate pagae.
+        3. The player can input the style, sauce, cheese, topping and name of the restaurant and hit submit to log their entry.
+ 
+    2. As a Pizza Diner, I want a simple user interface and functional interactivity.
 
-------
+        1. The site has been designed to be simple to navigate. 
+        2. Each page is layed out evenly and works cleanly when the items are entered and update, delete and submit are clicked.
+        3. The Special Slice title allows the diner to home any time they wish.
 
-## FAQ about the uptime script
+    3. As a Pizza Diner, I want a visually appealing experience.
+        1. The colors and contracts utilized make the text and buttons stand out.
+        2. Flash messages confirm when slices are input, updated and deleted.
+        3. The colorful combinations and highlights add to the user experience.
 
-**Why have you added this script?**
+### Further Testing
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+-   Tested on Google Chrome, Internet Explorer and Microsoft Edge.
+-   Viewed on variety of devices such as Desktop, Chromebook and Pixel XL.
+-   Testing was done to ensure that all pages linked correctly.
+-   Friends and family were asked to review site and documentation for any bugs and/or user issues.
+-   Attempted to enter blank entries and was unable to.
+-   Tested update, delete and submit buttons extensively.
 
-**How will this affect me?**
+### Known Bugs
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+-   Special Slice updates and inputs are sometimes not immediately displayed.
+-   Extra data is sent to MongoDB sometimes but doesn't seem to affect program.
+-   On some mobile devices the headings aren't fully centered.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Deployment
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Heroku
 
-**So….?**
+Project was deployed to Heroku with the following steps...
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+1. Log in to Heroku and click the “new” dropdown button on the dashboard and select “create new app”
+2. Name your app (the name must be unique) and ensure the correct region has been set for where you are. 
+3. Click “create app”.
+4. In the terminal in your app type “npm install -g heroku” and hit enter to install Heroku into your app. The “-g” installs Heroku globally across your project. 
+5. Log in to Heroku in the terminal by using “Heroku login -I” then input your email address and password for Heroku.
 
-**Can I opt out?**
+### Forking the GitHub Repository
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Forking the GitHub Repository makes an original repository copy on oGitHub account for viewing and/or making changes but not affecting original repository achieve with the following steps.
+
+1. Log in GitHub and locate [GitHub Repository](https://github.com/)
+2. At top of Repository, locate "Fork" Button where there is now a copy of original repository.
+
+### Making a Local Clone
+
+1. Log in GitHub and locate [GitHub Repository](https://github.com/)
+2. Under repository name, select "Clone or download".
+3. For cloning repository using HTTPS copy the link under "Clone with HTTPS".
+4. Open Git Bash and modify current working directory to location of your preferred cloned directory.
+5. Input `git clone`, and paste copied URL from Step 3.
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+$ git clone https://github.com/antfromano/special-slice
 ```
 
-**Anything more?**
+6. Press Enter. Local clone is created.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+```
+$ git clone https://github.com/antfromano/special-slice
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
 
----
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-Happy coding!
+## Credits
+
+### Code
+
+-   [Materialize:](https://materializecss.com/) used to make site responsive.
+
+-   [Mini Project](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase/01-text_index_searching): Mini Project concepts used to develop match site.
+
+### Content
+
+-   All content was written by the developer.
+
+-   The format for README.md was taken from [here](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md)
+
+
+### Acknowledgements
+
+-   Mentorship and guidance provided by Aaron Sinnott from Code Institute
+
+-   Tutor support at Code Institute for their support.
+
+-   I received inspiration for this project from [Amyh97](https://github.com/Amyh97)
