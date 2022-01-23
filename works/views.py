@@ -96,51 +96,23 @@ def edit_work(request, work_id):
     if not request.user.is_superuser:
         messages.error(request, 'sorry, only store owners can do that.')
         return redirect(reverse('home'))
-
     work = get_object_or_404(Work, pk=work_id)
     if request.method == 'POST':
-        # save the form data to the object
-        form = WorkForm(request.POST)
-
-        # check if form is valid
+        form = WorkForm(request.POST, request.FILES, instance=work)
         if form.is_valid():
-            # if it is, save it
-            form = form.save()
-
-            # increase the num of ratings
-            work.num_of_ratings += 1
-            # get the new updated rating from the form
-            new_rating = Decimal(request.POST['rating'])
-            # get the current rating
-            current_rating = work.rating
-            # get the number of ratings
-            num_of_ratings = work.num_of_ratings
-
-            # calculate the average (needs rounding of the decimal places)
-            work.rating = round((new_rating + current_rating) / num_of_ratings, 2)
-            # save the new rating to the work object
-            work.save()
-
-
-    #     form = WorkForm(request.POST, request.FILES, instance=work)
-    #     if form.is_valid():
-    #         form.save()
-    #         messages.success(request, 'successfully updated work!')
-    #         return redirect(reverse('work_item', args=[work.id]))
-    #     else:
-    #         messages.error(request, 'failed to update work. please ensure the form is valid.')
-    # else:
-    #     form = WorkForm(instance=work)
-    #     messages.info(request, f'you are editing {work.name}')
-    
-    form = WorkForm(instance=work)
-
+            form.save()
+            messages.success(request, 'successfully updated work!')
+            return redirect(reverse('work_item', args=[work.id]))
+        else:
+            messages.error(request, 'failed to update work. please ensure the form is valid.')
+    else:
+        form = WorkForm(instance=work)
+        messages.info(request, f'you are editing {work.name}')
     template = 'works/edit_work.html'
     context = {
         'form': form,
         'work': work,
     }
-
     return render(request, template, context)
 
 
@@ -150,12 +122,8 @@ def delete_work(request, work_id):
     if not request.user.is_superuser:
         messages.error(request, 'sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
+
     work = get_object_or_404(Work, pk=work_id)
     work.delete()
     messages.success(request, 'work deleted!')
     return redirect(reverse('works'))
-
-
-
-
