@@ -26,6 +26,7 @@ class Work(models.Model):
     rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True, default=1, validators=[
                                  MaxValueValidator(5), MinValueValidator(1)])
     image = models.ImageField(null=True, blank=True)
+    num_of_ratings = models.IntegerField(default=1, blank=False, null=False)
 
     def __str__(self):
         return self.name

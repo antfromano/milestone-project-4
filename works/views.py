@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Work, Content
 from .forms import WorkForm
-from reviews.views import review_work
+from decimal import Decimal
 
 # Create your views here.
 
@@ -99,16 +99,41 @@ def edit_work(request, work_id):
 
     work = get_object_or_404(Work, pk=work_id)
     if request.method == 'POST':
-        form = WorkForm(request.POST, request.FILES, instance=work)
+        # save the form data to the object
+        form = WorkForm(request.POST)
+
+        # check if form is valid
         if form.is_valid():
-            form.save()
-            messages.success(request, 'successfully updated work!')
-            return redirect(reverse('work_item', args=[work.id]))
-        else:
-            messages.error(request, 'failed to update work. please ensure the form is valid.')
-    else:
-        form = WorkForm(instance=work)
-        messages.info(request, f'you are editing {work.name}')
+            # if it is, save it
+            form = form.save()
+
+            # increase the num of ratings
+            work.num_of_ratings += 1
+            # get the new updated rating from the form
+            new_rating = Decimal(request.POST['rating'])
+            # get the current rating
+            current_rating = work.rating
+            # get the number of ratings
+            num_of_ratings = work.num_of_ratings
+
+            # calculate the average (needs rounding of the decimal places)
+            work.rating = round((new_rating + current_rating) / num_of_ratings, 2)
+            # save the new rating to the work object
+            work.save()
+
+
+    #     form = WorkForm(request.POST, request.FILES, instance=work)
+    #     if form.is_valid():
+    #         form.save()
+    #         messages.success(request, 'successfully updated work!')
+    #         return redirect(reverse('work_item', args=[work.id]))
+    #     else:
+    #         messages.error(request, 'failed to update work. please ensure the form is valid.')
+    # else:
+    #     form = WorkForm(instance=work)
+    #     messages.info(request, f'you are editing {work.name}')
+    
+    form = WorkForm(instance=work)
 
     template = 'works/edit_work.html'
     context = {
@@ -130,3 +155,7 @@ def delete_work(request, work_id):
     work.delete()
     messages.success(request, 'work deleted!')
     return redirect(reverse('works'))
+
+
+
+

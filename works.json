@@ -1,0 +1,169 @@
+[{
+    "model": "works.content",
+    "pk": 2,
+    "fields": {
+        "name": "animals"
+    }
+}, {
+    "model": "works.content",
+    "pk": 3,
+    "fields": {
+        "name": "flowers"
+    }
+}, {
+    "model": "works.content",
+    "pk": 4,
+    "fields": {
+        "name": "fruit"
+    }
+}, {
+    "model": "works.content",
+    "pk": 5,
+    "fields": {
+        "name": "landscapes"
+    }
+}, {
+    "model": "works.work",
+    "pk": 1,
+    "fields": {
+        "content": 5,
+        "name": "Boxboro Balloon",
+        "description": "Captures the colorful fall moment when all is right in the world.",
+        "is_sold": false,
+        "price": "150.00",
+        "rating": "4.50",
+        "image": "IMG_0151_OKxumiA.jpg"
+    }
+}, {
+    "model": "works.work",
+    "pk": 3,
+    "fields": {
+        "content": 2,
+        "name": "Sunny Bunny",
+        "description": "This colorful bunny grazing in the sun will always remind you of summer",
+        "is_sold": false,
+        "price": "175.00",
+        "rating": "4.75",
+        "image": "IMG_0153_6jEok7J.jpg"
+    }
+}, {
+    "model": "works.work",
+    "pk": 4,
+    "fields": {
+        "content": 3,
+        "name": "Gift of Daisies",
+        "description": "There isn't a better gift than a bouquet of daisies.",
+        "is_sold": false,
+        "price": "200.00",
+        "rating": "5.00",
+        "image": "IMG_0154_w2wM3SX.jpg"
+    }
+}, {
+    "model": "works.work",
+    "pk": 5,
+    "fields": {
+        "content": 2,
+        "name": "Sheeep",
+        "description": "Three sheep contently graze with a friendly neighborhood bird.",
+        "is_sold": false,
+        "price": "175.00",
+        "rating": "4.75",
+        "image": "IMG_0155_rbVdFsR.jpg"
+    }
+}, {
+    "model": "works.work",
+    "pk": 6,
+    "fields": {
+        "content": 5,
+        "name": "Flying Over",
+        "description": "You can't beat the view when you are flying over the places you love the most.",
+        "is_sold": false,
+        "price": "150.00",
+        "rating": "4.50",
+        "image": "IMG_0162_fBAoEpI.jpg"
+    }
+}, {
+    "model": "works.work",
+    "pk": 7,
+    "fields": {
+        "content": 4,
+        "name": "Crunch!",
+        "description": "Crisp apples before a clear blue sky.",
+        "is_sold": false,
+        "price": "125.00",
+        "rating": "4.25",
+        "image": "IMG_0729_a5nVtDH.JPG"
+    }
+}, {
+    "model": "works.work",
+    "pk": 8,
+    "fields": {
+        "content": 4,
+        "name": "Ready to Pick",
+        "description": "Granny loves to come to town to pick her Granny Smiths.",
+        "is_sold": false,
+        "price": "125.00",
+        "rating": "4.25",
+        "image": "IMG_0730_01qZMpj.JPG"
+    }
+}, {
+    "model": "works.work",
+    "pk": 9,
+    "fields": {
+        "content": 5,
+        "name": "Spring is Here",
+        "description": "Once winter ends the trees and birds spring to life.",
+        "is_sold": false,
+        "price": "150.00",
+        "rating": "4.50",
+        "image": "IMG_0164_ULjF6rG.jpg"
+    }
+}, {
+    "model": "works.work",
+    "pk": 10,
+    "fields": {
+        "content": 2,
+        "name": "Early Bird",
+        "description": "It is true what they say that the early bird gets the worm.",
+        "is_sold": false,
+        "price": "175.00",
+        "rating": "4.75",
+        "image": "IMG_0163_b6LSAab.jpg"
+    }
+}, {
+    "model": "works.work",
+    "pk": 11,
+    "fields": {
+        "content": 2,
+        "name": "Trying to Hide",
+        "description": "Cute bunny trying to hide on a cool summer day.",
+        "is_sold": false,
+        "price": "175.00",
+        "rating": "4.75",
+        "image": "IMG_0156.jpg"
+    }
+}, {
+    "model": "works.work",
+    "pk": 12,
+    "fields": {
+        "content": 2,
+        "name": "Red bird, red bird",
+        "description": "Cardinals perched surveying the landscape",
+        "is_sold": false,
+        "price": "175.00",
+        "rating": "5.00",
+        "image": "IMG_0157_knQX3cq.jpg"
+    }
+}, {
+    "model": "works.work",
+    "pk": 26,
+    "fields": {
+        "content": 2,
+        "name": "Rooster Morning",
+        "description": "You can almost hear this realistic rooster crowing loudly to start the day.",
+        "is_sold": false,
+        "price": "175.00",
+        "rating": "4.75",
+        "image": "IMG_0150_9AK6xvy.jpg"
+    }
+}]
