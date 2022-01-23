@@ -76,7 +76,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 Lighthouse was also used to validate the project for performance, accessability, best practices and SEO.
 
--   [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Desktop Results](https://github.com/antfromano/special-slice/blob/main/docs/lighthouse%20desktop.pdf)
+-   [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Desktop Results](docs/lighthouse_desktop_results.pdf)
 
 -   [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Mobile Results](docs/lighthouse_mobile_results.pdf)
 
