@@ -53,18 +53,17 @@
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
-                                            {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{% url 'edit_work' work.id %}">edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_work' work.id %}">delete</a>
-                                                </small>
+                                            {% if request.user.is_authenticated %}
+                                                {% if request.user.is_superuser %}
+                                                    <small class="ml-3">
+                                                        <a href="{% url 'edit_work' work.id %}">edit</a> | 
+                                                        <a class="text-danger" href="{% url 'delete_work' work.id %}">delete</a> |
+                                                    </small>
+                                                {% endif %}
+                                                    <small>
+                                                        <a class="text-success" href="{% url 'review_work' work.id %}">review</a>
+                                                    </small>
                                             {% endif %}
-                                            <!-- 
-                                            {% if not work.is_sold %}
-                                                <input type="submit" class="btn btn-primary rounded-0 text" value="quick add to cart" data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
-                                                <input type="hidden" name="redirect_url" value="{{ request.path }}"data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">                         
-                                            {% endif %} 
-                                            -->
                                         </div>
                                     </div>
                                 </div>

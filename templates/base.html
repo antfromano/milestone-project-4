@@ -71,14 +71,14 @@
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                        <a href="{% url 'add_work' %}" class="dropdown-item">product management</a>
-                    {% endif %}
-                    <a href="{% url 'profile' %}" class="dropdown-item">my profile</a>
-                    <a href="{% url 'account_logout' %}" class="dropdown-item">logout</a>
-                {% else %}
-                    <a href="{% url 'account_signup' %}" class="dropdown-item">register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">login</a>
+                  {% if request.user.is_superuser %}
+                      <a href="{% url 'add_work' %}" class="dropdown-item">product management</a>
+                  {% endif %}
+                      <a href="{% url 'profile' %}" class="dropdown-item">my profile</a>
+                      <a href="{% url 'account_logout' %}" class="dropdown-item">logout</a>
+                  {% else %}
+                      <a href="{% url 'account_signup' %}" class="dropdown-item">register</a>
+                      <a href="{% url 'account_login' %}" class="dropdown-item">login</a>
                 {% endif %}
               </div>
             </li>
