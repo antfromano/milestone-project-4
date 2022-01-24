@@ -126,7 +126,7 @@ Lighthouse was also used to validate the project for performance, accessability,
 -   Add work, edit work and inputs are sometimes not immediately displayed.
 -   As these are unique and one of a kind items, sold items are aren't available for purchase and would need to be refreshed with new items to keep store open.
 -   On very wide screens some forms and tables aren't fully centered.
--   Time constraints did not allow for extensive and full featured README.md file, implementation of ratings and review features or cleaning up and commenting out code.
+-   Time constraints did not allow for extensive and full featured README.md file, implementation of ratings and review features or fully cleaning up and commenting out code.
 
 ## Deployment
 
