@@ -34,6 +34,10 @@ Designed to provide a simple experience for people to purchase unique art while 
     -   #### Imagery
         -   Utilized Python, HTML, Python, and CSS.
 
+*   ### Wireframes
+
+    -   The Balsamiq Cloud Wireframe providing framework for development is accessible [here](docs/ancraft_balsamiq.pdf)
+
 ## Features
 
 -   Responsive on all device sizes.
