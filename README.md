@@ -2,7 +2,7 @@
 
 [View the live project here](https://mp4ancraft.herokuapp.com/works/)
 
-An art ecommerce designed using Python, HTML, Python, CSS, JavaScript, Django, Heroku and Amazon S3 to highlight skills learned during Full Stack Software Development coursework.
+An art ecommerce designed using Python, HTML, Python, CSS, JavaScript, Bootstrap, Django, Heroku and Amazon S3 to highlight skills learned during Full Stack Software Development coursework.
 
 <h2 align="center"><img src="img/ancraftmultidevicewebsitemockup.jpg"></h2>
 
@@ -82,29 +82,34 @@ Lighthouse was also used to validate the project for performance, accessability,
 
 ### Testing User Stories from User Experience (UX)
 
--   #### Pizza Diner Goals
+-   #### Customer Goals
 
-    1. As a Pizza Diner, I want to share my favorite pizza.
+    1. As a customer, I want to browse the available artwork.
 
-        1. Upon entering the site, diners are greeted with a simple title, several pizza slices and an Add Slice button which allows them to add a slice.
-        2. The Add Slice button is immediately noticeable which leads the diner to the appropriate pagae.
-        3. The player can input the style, sauce, cheese, topping and name of the restaurant and hit submit to log their entry.
+        1. Upon entering the site, customers are greeted with a simple title, several drop-down menus, search bar, my account, shopping cart and an explore works button which allows them to browse every art piece with one click.
+        2. The my account button is immediately noticeable which leads the customer to the appropriate pages.
+        3. The customer can input search requirements and hit search to search the available artwork.
  
-    2. As a Pizza Diner, I want a simple user interface and functional interactivity.
+    2. As a customer, I want a simple user interface and functional interactivity.
 
         1. The site has been designed to be simple to navigate. 
-        2. Each page is layed out evenly and works cleanly when the items are entered and update, delete and submit are clicked.
-        3. The Special Slice title allows the diner to home any time they wish.
+        2. Each page is laid out evenly and works cleanly when the images and art content are clicked and the cart is updated when artwork is added.
+        3. The ancraft title allows the customer to view all works any time they wish.
 
-    3. As a Pizza Diner, I want a visually appealing experience.
-        1. The colors and contracts utilized make the text and buttons stand out.
-        2. Flash messages confirm when slices are input, updated and deleted.
+    3. As a customer, I want a recognizable and secure checkout experience.
+        1. The colors and contrasts utilized make the text and buttons stand out.
+        2. Flash messages confirm inputs, edits and deletes
         3. The colorful combinations and highlights add to the user experience.
+    
+    4. As a customer, I want an order summary and confirmation.
+        1. Upon checking out, customers are given and order summary and confirmation.
+        2. The specifics of the order are neatly and recognizably organized.
+        3. When returning to the site, registered users can access their order history.
 
 ### Further Testing
 
 -   Tested on Google Chrome, Internet Explorer and Microsoft Edge.
--   Viewed on variety of devices such as Desktop, Chromebook and Pixel XL.
+-   Viewed on variety of devices such as Desktop, Chromebook and Pixel 3a XL.
 -   Testing was done to ensure that all pages linked correctly.
 -   Friends and family were asked to review site and documentation for any bugs and/or user issues.
 -   Attempted to enter blank entries and was unable to.
@@ -112,9 +117,9 @@ Lighthouse was also used to validate the project for performance, accessability,
 
 ### Known Bugs
 
--   Special Slice updates and inputs are sometimes not immediately displayed.
--   Extra data is sent to MongoDB sometimes but doesn't seem to affect program.
--   On some mobile devices the headings aren't fully centered.
+-   Add work, edit work and inputs are sometimes not immediately displayed.
+-   As these are unique and one of a kind items, sold items are aren't available for purchase and would need to be refreshed with new items to keep store open.
+-   On very wide screens some forms and tables aren't fully centered.
 
 ## Deployment
 
@@ -144,13 +149,13 @@ Forking the GitHub Repository makes an original repository copy on oGitHub accou
 5. Input `git clone`, and paste copied URL from Step 3.
 
 ```
-$ git clone https://github.com/antfromano/special-slice
+$ git clone https://github.com/antfromano/milestone-project-4
 ```
 
 6. Press Enter. Local clone is created.
 
 ```
-$ git clone https://github.com/antfromano/special-slice
+$ git clone https://github.com/antfromano/milestone-project-4
 > Cloning into `CI-Clone`...
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.
@@ -164,9 +169,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
--   [Materialize:](https://materializecss.com/) used to make site responsive.
+-   [Bootstrap:](https://getbootstrap.com) used to make site responsive.
 
--   [Mini Project](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase/01-text_index_searching): Mini Project concepts used to develop match site.
+-   [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1): As an invaluable guide to develop site.
 
 ### Content
 
@@ -177,8 +182,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Acknowledgements
 
--   Mentorship and guidance provided by Aaron Sinnott from Code Institute
+-   Mentorship and guidance provided by Rahul Lakhanpal from Code Institute
 
 -   Tutor support at Code Institute for their support.
 
--   I received inspiration for this project from [Amyh97](https://github.com/Amyh97)
+-   I received inspiration for this project from [haydal810](https://github.com/Code-Institute-Submissions/haydal810-Milestone-Project-4)
