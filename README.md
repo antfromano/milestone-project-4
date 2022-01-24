@@ -2,7 +2,7 @@
 
 [View the live project here](https://mp4ancraft.herokuapp.com/works/)
 
-An art ecommerce designed using Python, HTML, Python, CSS, JavaScript, Bootstrap, Django, Heroku and Amazon S3 to highlight skills learned during Full Stack Software Development coursework.
+An art ecommerce designed using Python, HTML, Python, CSS, JavaScript, Bootstrap, Django, Stripe, Heroku and Amazon S3 to highlight skills learned during Full Stack Software Development coursework.
 
 <h2 align="center"><img src="img/ancraftmultidevicewebsitemockup.jpg"></h2>
 
@@ -57,12 +57,13 @@ Designed to provide a simple experience for people to purchase unique art while 
 
 1. [Django:](https://www.djangoproject.com/)
     - for database.
-
 1. [Heroku:](https://www.heroku.com/)
     - for deployment.
 1. [Amazon S3:](https://aws.amazon.com/s3/)
     - for Cloud Object Storage.
-1. [GitHub:](https://github.com/antfromano/special-slice)
+1. [Stripe:](https://stripe.com)
+    - for online payment processing.
+1. [GitHub:](https://github.com/antfromano/milestone-project-4)
     - as a repository, distributed version-control system for tracking changes and to deploy and host final version of code.
 1. [Gitpod:](https://gitpod.io/)
     - as a collaborative development environment.
@@ -112,8 +113,7 @@ Lighthouse was also used to validate the project for performance, accessability,
 -   Viewed on variety of devices such as Desktop, Chromebook and Pixel 3a XL.
 -   Testing was done to ensure that all pages linked correctly.
 -   Friends and family were asked to review site and documentation for any bugs and/or user issues.
--   Attempted to enter blank entries and was unable to.
--   Tested update, delete and submit buttons extensively.
+-   Tested all buttons and inputs extensively.
 
 ### Known Bugs
 
