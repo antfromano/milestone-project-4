@@ -71,6 +71,8 @@ Designed to provide a simple experience for people to purchase unique art while 
     - as a repository, distributed version-control system for tracking changes and to deploy and host final version of code.
 1. [Gitpod:](https://gitpod.io/)
     - as a collaborative development environment.
+1. [Balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create the [wireframes](docs/ancraft_balsamiq.pdf) during the design process.
 
 ## Testing
 
