@@ -32,7 +32,7 @@ Designed to provide a simple experience for people to purchase unique art while 
     -   #### Typography
         -   Balsamiq Sans font is the main font used throughout the whole website.
     -   #### Imagery
-        -   Utilized Python, HTML, Python, CSS, JavaScript, Django, Heroku and Amazon S3.
+        -   Utilized Python, HTML, Python, and CSS.
 
 ## Features
 
