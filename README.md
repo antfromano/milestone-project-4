@@ -2,7 +2,7 @@
 
 [View the live project here](https://mp4ancraft.herokuapp.com/works/)
 
-An art ecommerce website designed using Python, HTML, Python, CSS, JavaScript, Bootstrap, Django, Stripe, Heroku and Amazon S3 to highlight skills learned during Full Stack Software Development coursework.
+An art ecommerce website designed using Python, HTML, CSS, JavaScript, Bootstrap, Django, Stripe, Heroku and Amazon S3 to highlight skills learned during Full Stack Software Development coursework.
 
 <h2 align="center"><img src="img/ancraftmultidevicewebsitemockup.jpg"></h2>
 
