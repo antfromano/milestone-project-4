@@ -9,8 +9,8 @@ for the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-import environ
 import os
+import environ
 import dj_database_url
 
 env = environ.Env(
