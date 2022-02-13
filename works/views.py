@@ -8,6 +8,7 @@ from decimal import Decimal
 
 # Create your views here.
 
+
 def all_works(request):
     """ A view to show all works, including sorting and search queries """
 
