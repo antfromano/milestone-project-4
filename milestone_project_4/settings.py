@@ -13,27 +13,27 @@ import os
 import environ
 import dj_database_url
 
-env = environ.Env(
+#env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, False)
-)
+    #DEBUG=(bool, False)
+#)
 
 # reading .env file
-environ.Env.read_env()
+#environ.Env.read_env()
 
 # Set the project base directory
 # build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Take environment variables from .env file
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+#environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # quick-start development settings - unsuitable for production
 # see https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = env('DEBUG')
+DEBUG = 'DEVELOPMENT' in os.environ
+#DEBUG = env('DEBUG')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
@@ -132,31 +132,13 @@ WSGI_APPLICATION = 'milestone_project_4.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        #'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-        # read os.environ['DATABASE_URL'] and raises
-        # ImproperlyConfigured exception if not found
-        #
-        # The db() method is an alias for db_url().
-        'default': env.db(),
-
-        # read os.environ['SQLITE_URL']
-        'extra': env.db_url(
-            'SQLITE_URL',
-            default='sqlite:////tmp/my-tmp-sqlite.db'
-        )
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-    CACHES = {
-        # Read os.environ['CACHE_URL'] and raises
-        # ImproperlyConfigured exception if not found.
-        #
-        # The cache() method is an alias for cache_url().
-        'default': env.cache(),
-
-        # read os.environ['REDIS_URL']
-        'redis': env.cache_url('REDIS_URL')
-}
 else:
     DATABASES = {
         'default': {
