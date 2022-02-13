@@ -23,7 +23,7 @@ def all_works(request):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
-                
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -40,7 +40,7 @@ def all_works(request):
             if not query:
                 messages.error(request, "you didn't enter search criteria")
                 return redirect(reverse('works'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             works = works.filter(queries)
 
@@ -82,7 +82,7 @@ def add_work(request):
             messages.error(request, 'failed to add work. please ensure the form is valid.')
     else:
         form = WorkForm()
-    
+
     template = 'works/add_work.html'
     context = {
         'form': form,
