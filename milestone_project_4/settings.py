@@ -10,34 +10,20 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import environ
 import dj_database_url
 
-#env = environ.Env(
-    # set casting, default value
-    #DEBUG=(bool, False)
-#)
-
-# reading .env file
-#environ.Env.read_env()
-
-# Set the project base directory
 # build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Take environment variables from .env file
-#environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # quick-start development settings - unsuitable for production
 # see https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
-#DEBUG = env('DEBUG')
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
-#SECRET_KEY = env('SECRET_KEY')
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['mp4ancraft.herokuapp.com', 'localhost']
 
@@ -129,10 +115,6 @@ WSGI_APPLICATION = 'milestone_project_4.wsgi.application'
 
 
 # database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-
-# Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 if 'DATABASE_URL' in os.environ:
