@@ -95,20 +95,5 @@
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'rate_work' work.id %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {{ field }}                  
-                    {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-outline-success rounded-0" href="{% url 'works' %}">cancel</a>
-                        <button class="btn btn-primary rounded-0" type="submit">rate work</button>
-                    </div>
-                </form>
-            </div>            
-        </div>
     </div>
 {% endblock %}
