@@ -12,34 +12,7 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">review work</h2>
-                <h5 class="text-muted">review a work</h5>
-                <hr>
-                <hr>
 
-                <h2 class="subtitle">Reviews</h2>
-                <div class="reviews-wrapper">
-                    {% for review in works.reviews.all %}
-                        <div class="notification">
-                            <p>
-                                <strong>date: </strong>{{ review.date_added|date:"Y-m-d" }},
-                                <strong>rating: </strong>{{ review.stars }}
-                            </p>
-
-                            {{ review.review_content }}
-                        </div>
-                    {% empty %}
-                        <div class="notification">
-                            no reviews yet...
-                        </div>
-                    {% endfor %}
-
-            </div>
-
-        </div>
         <div class="overlay"></div>
         <div class="container-fluid">
             <div class="row">
