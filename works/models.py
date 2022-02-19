@@ -36,4 +36,3 @@ class Review(models.Model):
 
     review_content = models.TextField(blank=True)
     stars = models.IntegerField()
-    date_added = models.DateTimeField(auto_now_add=True)

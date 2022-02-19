@@ -22,7 +22,7 @@
 
                 <h2 class="subtitle">Reviews</h2>
                 <div class="reviews-wrapper">
-                    {% for review in work.reviews.all %}
+                    {% for review in works.reviews.all %}
                         <div class="notification">
                             <p>
                                 <strong>date: </strong>{{ review.date_added|date:"Y-m-d" }},
