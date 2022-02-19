@@ -52,7 +52,6 @@
                         {% if work.rating %}
                             <small class="text-muted">
                                 <i class="fas fa-star mr-1"></i>{{ work.rating }} / 5 
-                                 <a class="text-warning" href="{% url 'rate_work' work.id %}">  rate</a>
                             </small>
                         {% else %}
                             <small class="text-muted">No Rating</small>
@@ -116,14 +115,4 @@
             </div>            
         </div>
     </div>
-{% endblock %}
-
-{% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        $('#new-image').change(function() {
-            var file = $('#new-image')[0].files[0];
-            $('#filename').text(`image will be set to: ${file.name}`);
-        });
-    </script>
 {% endblock %}
