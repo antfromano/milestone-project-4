@@ -21,7 +21,23 @@
                 <hr>
 
                 <h2 class="subtitle">Reviews</h2>
+                <div class="reviews-wrapper">
+                    {% for review in work.reviews.all %}
+                        <div class="notification">
+                            <p>
+                                <strong>date: </strong>{{ review.date_added|date:"Y-m-d" }},
+                                <strong>rating: </strong>{{ review.stars }}
+                            </p>
 
+                            {{ review.review_content }}
+                        </div>
+                    {% empty %}
+                        <div class="notification">
+                            no reviews yet...
+                        </div>
+                    {% endfor %}
+
+            </div>
 
         </div>
         <div class="overlay"></div>

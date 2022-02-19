@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Work, Content, WorkReview
+from .models import Work, Content, Review
 
 class WorkAdmin(admin.ModelAdmin):
     list_display = (
@@ -15,4 +15,4 @@ class WorkAdmin(admin.ModelAdmin):
 
 admin.site.register(Work, WorkAdmin)
 admin.site.register(Content)
-admin.site.register(WorkReview)
+admin.site.register(Review)

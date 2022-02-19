@@ -30,7 +30,7 @@ class Work(models.Model):
     def __str__(self):
         return self.name
 
-class WorkReview(models.Model):
+class Review(models.Model):
     work = models.ForeignKey(Work, related_name="reviews", on_delete=models.CASCADE)
     user = models.ForeignKey(User, related_name="reviews", on_delete=models.CASCADE)
 
