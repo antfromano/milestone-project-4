@@ -18,6 +18,26 @@
                 <h2 class="logo-font mb-4">rate work</h2>
                 <h5 class="text-muted">rate a work</h5>
                 <hr>
+                <hr>
+
+                <h2 class="subtitle">Reviews</h2>
+
+                <div class="reviews-wrapper">
+                    {% for review in work.reviews.all %}
+                        <div class="notification">
+                            <p>
+                                <strong>date: </strong>{{ review.date_added|date:"Y-m-d" }},
+                                <strong>rating: </strong>{{ review.stars }}
+                            </p>
+
+                            {{ review.review_content }}
+                        </div>
+                    {% empty %}
+                        <div class="notification">
+                            no reviews yet...
+                        </div>
+                    {% endfor %}
+
             </div>
         </div>
         <div class="overlay"></div>
@@ -104,10 +124,3 @@
     </html>
 
 {% endblock %}
-{% load static %}
-<html>
-...
-<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
-<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
-...
-</html>
