@@ -35,4 +35,5 @@ class Review(models.Model):
     user = models.ForeignKey(User, related_name="reviews", on_delete=models.CASCADE)
 
     review_content = models.TextField(blank=True)
-    stars = models.IntegerField()
+    user_rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True, default=1, validators=[
+                                 MaxValueValidator(5), MinValueValidator(1)])
