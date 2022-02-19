@@ -20,44 +20,46 @@
                 <hr>
             </div>
         </div>
-        <div class="card h-100 border-0">
-            {% if work.image %}
-            <a href="{% url 'work_item' work.id %}">
-                <img class="card-img-top img-fluid" src="{{ work.image.url }}" alt="{{ item.work.name }}">
-            </a>
-            {% else %}
-            <a href="{% url 'work_item' work.id %}">
-                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.work.name }}">
-            </a>
-            {% endif %}
-            <div class="card-body pb-0">
-                <p class="mb-0">{{ work.name }}</p>
-            </div>
-            <div class="card-footer bg-white pt-0 border-0 text-left">
-                <div class="row">
-                    <div class="col">
-                        <p class="lead mb-0 text-left font-weight-bold">${{ work.price }}</p>
-                        {% if work.content %}
-                            <p class="small mt-1 mb-0">
-                                <a class="text-muted" href="{% url 'works' %}?content={{ work.content.name }}">
-                                    <i class="fas fa-tag mr-1"></i>{{ work.content.name }}
-                                </a>
-                            </p>
-                        {% endif %}
-                        {% if work.rating %}
-                            <small class="text-muted">
-                                <i class="fas fa-star mr-1"></i>{{ work.rating }} / 5 
-                                <a class="text-warning" href="{% url 'rate_work' work.id %}">  rate</a>
-                            </small>
-                        {% else %}
-                            <small class="text-muted">No Rating</small>
-                        {% endif %}
-                            {% if request.user.is_superuser %}
-                                <small class="ml-3">
-                                    <a href="{% url 'edit_work' work.id %}">edit</a> | 
-                                    <a class="text-danger" href="{% url 'delete_work' work.id %}">delete</a>
-                                </small>
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card h-100 border-0">
+                {% if work.image %}
+                <a href="{% url 'work_item' work.id %}">
+                    <img class="card-img-top img-fluid" src="{{ work.image.url }}" alt="{{ item.work.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'work_item' work.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.work.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <p class="mb-0">{{ work.name }}</p>
+                </div>
+                <div class="card-footer bg-white pt-0 border-0 text-left">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead mb-0 text-left font-weight-bold">${{ work.price }}</p>
+                            {% if work.content %}
+                                <p class="small mt-1 mb-0">
+                                    <a class="text-muted" href="{% url 'works' %}?content={{ work.content.name }}">
+                                        <i class="fas fa-tag mr-1"></i>{{ work.content.name }}
+                                    </a>
+                                </p>
                             {% endif %}
+                            {% if work.rating %}
+                                <small class="text-muted">
+                                    <i class="fas fa-star mr-1"></i>{{ work.rating }} / 5 
+                                    <a class="text-warning" href="{% url 'rate_work' work.id %}">  rate</a>
+                                </small>
+                            {% else %}
+                                <small class="text-muted">No Rating</small>
+                            {% endif %}
+                                {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_work' work.id %}">edit</a> | 
+                                        <a class="text-danger" href="{% url 'delete_work' work.id %}">delete</a>
+                                    </small>
+                                {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
