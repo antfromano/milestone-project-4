@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Work, Content, Review
+from .models import Work, Content
 
 
 class WorkForm(forms.ModelForm):
