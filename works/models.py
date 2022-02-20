@@ -34,6 +34,8 @@ class Review(models.Model):
     class Meta:
         verbose_name_plural = 'Reviews'
 
+    work = models.ForeignKey('Work', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     user_rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True, default=1, validators=[
                                  MaxValueValidator(5), MinValueValidator(1)])
