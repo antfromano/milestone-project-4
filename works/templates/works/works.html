@@ -49,7 +49,7 @@
                                                 </p>
                                             {% endif %}
                                             <small class="text-muted">
-                                                <a class="text-warning" href="">review</a> |
+                                                <a class="text-warning" href="{% url 'review_work' work.id %}">review</a> |
                                             </small>
                                                 {% if request.user.is_superuser %}
                                                     <small class>
