@@ -1,5 +1,7 @@
 from django.db import models
+from django.db.models import Avg
 from django.core.validators import MaxValueValidator, MinValueValidator
+
 
 class Content(models.Model):
 
@@ -31,11 +33,12 @@ class Work(models.Model):
 
 class Review(models.Model):
 
+    """review class"""
+
     class Meta:
         verbose_name_plural = 'Reviews'
 
-    work = models.ForeignKey('Work', null=True, blank=True,
-                                 on_delete=models.SET_NULL)
+    work = models.ForeignKey('Work', null=True, blank=True, on_delete=models.SET_NULL)
     user_rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True, default=1, validators=[
                                  MaxValueValidator(5), MinValueValidator(1)])
     comment = models.CharField(max_length=200, default='')

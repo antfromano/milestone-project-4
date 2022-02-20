@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Work, Content
+from .models import Work, Content, Review
 from .forms import WorkForm
 from decimal import Decimal
 
@@ -57,9 +57,14 @@ def work_item(request, work_id):
     """ A view to show individual work details """
 
     work = get_object_or_404(Work, pk=work_id)
+    all_reviews = Review.objects.filter(work=work)
+    average_rating = sum([i.user_rating for i in all_reviews])/all_reviews.count()
 
+    print(average_rating)
     context = {
         'work': work,
+        'average_rating': average_rating,
+        'all_reviews': all_reviews,
     }
 
     return render(request, 'works/work_item.html', context)
