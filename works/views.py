@@ -58,9 +58,11 @@ def work_item(request, work_id):
 
     work = get_object_or_404(Work, pk=work_id)
     all_reviews = Review.objects.filter(work=work)
-    average_rating = sum([i.user_rating for i in all_reviews])/all_reviews.count()
-
-    print(average_rating)
+    try:
+        average_rating = sum([i.user_rating for i in all_reviews])/all_reviews.count()
+    except ZeroDivisionError:
+        average_rating = 0
+        
     context = {
         'work': work,
         'average_rating': average_rating,
