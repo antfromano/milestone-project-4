@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Work, Content
+from .models import Work, Content, Review
 
 
 class WorkForm(forms.ModelForm):
@@ -14,6 +14,19 @@ class WorkForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         contents = Content.objects.all()
+
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-black rounded-0'
+
+class ReviewForm(forms.ModelForm):
+
+    class Meta:
+        model = Review
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        contents = User.objects.all()
 
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
