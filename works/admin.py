@@ -13,15 +13,6 @@ class WorkAdmin(admin.ModelAdmin):
 
     ordering = ('content',)
 
-class ReviewAdmin(admin.ModelAdmin):
-    list_display = (
-        'work',
-        'rating',
-        'comment',
-    )
-
-    ordering = ('work',)
-
 admin.site.register(Work, WorkAdmin)
 admin.site.register(Content)
 admin.site.register(Review)
