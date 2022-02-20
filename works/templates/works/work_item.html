@@ -42,13 +42,15 @@
                     {% if average_rating %}
                         <small class="text-muted">
                             <i class="fas fa-star mr-1"></i>{{ average_rating }} / 5 
-                             <a class="text-warning" href="">  review
                         </small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
+                    <small class="text-muted">
+                        <a class="text-warning" href="">review</a> |
+                    </small>
                         {% if request.user.is_superuser %}
-                            <small class="ml-3">
+                            <small class>
                                 <a href="{% url 'edit_work' work.id %}">edit</a> | 
                                 <a class="text-danger" href="{% url 'delete_work' work.id %}">delete</a>
                             </small>
