@@ -139,7 +139,17 @@ def delete_work(request):
 @login_required
 def review_work(request):
     """Review a work in the store"""
-    form = ReviewForm()
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'successfully reviewed work!')
+            return redirect(reverse('review_work'))
+        else:
+            messages.error(request, 'failed to review work. please ensure the form is valid.')
+    else:
+        form = ReviewForm()
+
     template = 'works/review_work.html'
     context = {
         'form' : form,

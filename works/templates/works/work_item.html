@@ -47,7 +47,7 @@
                         <small class="text-muted">No Rating</small>
                     {% endif %}
                     <small class="text-muted">
-                        <a class="text-warning" href="">review</a> |
+                        <a class="text-warning" href="{% url 'review_work' %}">review</a> |
                     </small>
                         {% if request.user.is_superuser %}
                             <small class>
