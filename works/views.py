@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Work, Content, Review
+from .models import Work, Content
 from .forms import WorkForm
 from decimal import Decimal
 
@@ -57,16 +57,16 @@ def work_item(request, work_id):
     """ A view to show individual work details """
 
     work = get_object_or_404(Work, pk=work_id)
-    all_reviews = Review.objects.filter(work=work)
-    try:
-        average_rating = round(sum([i.user_rating for i in all_reviews])/all_reviews.count(), 2)
-    except ZeroDivisionError:
-        average_rating = 0
+    #all_reviews = Review.objects.filter(work=work)
+    #try:
+    #    average_rating = round(sum([i.user_rating for i in all_reviews])/all_reviews.count(), 2)
+    #except ZeroDivisionError:
+    #    average_rating = 0
         
     context = {
         'work': work,
-        'average_rating': average_rating,
-        'all_reviews': all_reviews,
+        #'average_rating': average_rating,
+        #'all_reviews': all_reviews,
     }
 
     return render(request, 'works/work_item.html', context)
@@ -125,7 +125,7 @@ def edit_work(request, work_id):
 
 
 @login_required
-def delete_work(request, work_id):
+def delete_work(request):
     """ Delete a product from the store """
     if not request.user.is_superuser:
         messages.error(request, 'sorry, only store owners can do that.')
@@ -135,25 +135,3 @@ def delete_work(request, work_id):
     work.delete()
     messages.success(request, 'work deleted!')
     return redirect(reverse('works'))
-
-@login_required
-def review_work(request, work_id):
-    """ Review a work in the store """
-    work = get_object_or_404(Work, pk=work_id)
-    if request.method == 'POST':
-        form = WorkForm(request.POST, request.FILES, instance=work)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'successfully reviewed work!')
-            return redirect(reverse('work_item', args=[work.id]))
-        else:
-            messages.error(request, 'failed to review work. please ensure the form is valid.')
-    else:
-        form = WorkForm(instance=work)
-        messages.info(request, f'you are reviewing {work.name}')
-    template = 'works/review_work.html'
-    context = {
-        'form': form,
-        'work': work,
-    }
-    return render(request, template, context)
