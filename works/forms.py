@@ -18,15 +18,15 @@ class WorkForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
 
-class ReviewForm(forms.WorkForm):
+class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
         fields = '__all__'
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        works = Work.objects.all()
+    #def __init__(self, *args, **kwargs):
+        #super().__init__(*args, **kwargs)
+        #works = Work.objects.all()
     
-    for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+    #for field_name, field in self.fields.items():
+            #field.widget.attrs['class'] = 'border-black rounded-0'

@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Work, Content, Review
-from .forms import WorkForm
+from .forms import WorkForm, ReviewForm
 from decimal import Decimal
 
 # Create your views here.
@@ -126,7 +126,7 @@ def edit_work(request, work_id):
 
 @login_required
 def delete_work(request):
-    """ Delete a product from the store """
+    """ Delete a work from the store """
     if not request.user.is_superuser:
         messages.error(request, 'sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -135,3 +135,14 @@ def delete_work(request):
     work.delete()
     messages.success(request, 'work deleted!')
     return redirect(reverse('works'))
+
+@login_required
+def review_work(request):
+    """Review a work in the store"""
+    form = ReviewForm()
+    template = 'works/review_work.html'
+    context = {
+        'form' : form,
+    }
+
+    return render(request, template, context)
