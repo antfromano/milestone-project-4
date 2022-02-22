@@ -137,22 +137,27 @@ def delete_work(request):
     return redirect(reverse('works'))
 
 @login_required
-def review_work(request):
+def review_work(request, work_id):
     """Review a work in the store"""
+    work = get_object_or_404(Work, pk=work_id)
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
+        form = ReviewForm(request.POST, request.FILES, instance=work)
         if form.is_valid():
             form.save()
             messages.success(request, 'successfully reviewed work!')
-            return redirect(reverse('review_work'))
+            return redirect(reverse('work_item', args=[work.id]))
         else:
             messages.error(request, 'failed to review work. please ensure the form is valid.')
     else:
         form = ReviewForm()
 
+    form = ReviewForm(instance=work)
+    messages.info(request, f'you are reviewing {work.name}')
+
     template = 'works/review_work.html'
     context = {
-        'form' : form,
+        'form': form,
+        'work': work,
     }
 
     return render(request, template, context)
