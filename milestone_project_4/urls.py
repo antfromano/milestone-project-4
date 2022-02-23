@@ -1,4 +1,4 @@
-"""milestone_project_4 URL Configuration
+"""milestone_project_4 URL configuration
 the `urlpatterns` list routes URLs to views. for more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
 examples:
@@ -6,7 +6,7 @@ function views
     1. add an import:  from my_app import views
     2. add a URL to urlpatterns:  path('', views.home, name='home')
 class-based views
-    1. add an import:  from other_app.views import Home
+    1. add an import:  from other_app.views import home
     2. add a URL to urlpatterns:  path('', Home.as_view(), name='home')
 including another URLconf
     1. import the include() function: from django.urls import include, path

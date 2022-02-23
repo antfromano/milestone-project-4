@@ -6,11 +6,11 @@ from .models import Work, Content, Review
 from .forms import WorkForm, ReviewForm
 from decimal import Decimal
 
-# Create your views here.
+# create your views here.
 
 
 def all_works(request):
-    """ A view to show all works, including sorting and search queries """
+    """ a view to show all works, including sorting and search queries """
 
     works = Work.objects.all()
     query = None
@@ -54,7 +54,7 @@ def all_works(request):
 
 
 def work_item(request, work_id):
-    """ A view to show individual work details """
+    """ a view to show individual work details """
 
     work = get_object_or_404(Work, pk=work_id)
     all_reviews = Review.objects.filter(work=work)
@@ -74,7 +74,7 @@ def work_item(request, work_id):
 
 @login_required
 def add_work(request):
-    """ Add a work to the store """
+    """ add a work to the store """
     if not request.user.is_superuser:
         messages.error(request, 'sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -100,7 +100,7 @@ def add_work(request):
 
 @login_required
 def edit_work(request, work_id):
-    """ Edit a work in the store """
+    """ edit a work in the store """
     if not request.user.is_superuser:
         messages.error(request, 'sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -138,7 +138,7 @@ def delete_work(request):
 
 @login_required
 def review_work(request, work_id):
-    """Review a work in the store"""
+    """review a work in the store"""
     
     work = get_object_or_404(Work, pk=work_id)
     if request.method == 'POST':

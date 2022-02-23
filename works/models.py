@@ -28,7 +28,6 @@ class Work(models.Model):
     def __str__(self):
         return self.name
 
-
 class Review(models.Model):
 
     class Meta:
