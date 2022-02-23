@@ -18,6 +18,7 @@ class ReviewAdmin(admin.ModelAdmin):
         'work',
         'user_rating',
         'comment',
+        'created_at',
     )
 
     ordering = ('work',)

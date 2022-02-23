@@ -23,9 +23,7 @@
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.work.name }}">
                         </a>
-                    {% endif %}
-                    
-                   
+                    {% endif %}   
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
@@ -47,10 +45,10 @@
                         <small class="text-muted">No Rating</small>
                     {% endif %}
                     <small class="text-muted">
-                        <a class="text-warning" href="{% url 'review_work' work.id %}">review</a> |
+                        <a class="text-warning" href="{% url 'review_work' work.id %}">review</a>
                     </small>
                         {% if request.user.is_superuser %}
-                            <small class>
+                            <small class> |
                                 <a href="{% url 'edit_work' work.id %}">edit</a> | 
                                 <a class="text-danger" href="{% url 'delete_work' work.id %}">delete</a>
                             </small>
@@ -81,18 +79,19 @@
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}"data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
                                     {% endif %}
                             </div>
-                            <div>
-                            <small class="text-muted">
-                                <p class="mt-3">comments</p>
-                            </small>               
-                                {% for i in all_reviews %}
-                                <p class="text-muted">{{ i.comment }}</p>
-                                {% endfor %}
-                            </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <small class="text-left text-muted">
+                <p class="mt-1">comments:</p>
+            </small>
+                {% for i in all_reviews %}
+                <a class="text-lowercase font-italic">"{{i.comment }}" </a>
+                {% endfor %}
+            </div>
+        </div>
 {% endblock %}
