@@ -22,7 +22,7 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields = '__all__'
+        fields = ('user_rating', 'comment',)
 
     #def __init__(self, *args, **kwargs):
         #super().__init__(*args, **kwargs)

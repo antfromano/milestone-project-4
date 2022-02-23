@@ -40,4 +40,4 @@ class Review(models.Model):
     comment = models.CharField(max_length=200, default='')
 
     def __str__(self):
-        return self.work.name
+        return self.comment
