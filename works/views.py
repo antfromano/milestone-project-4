@@ -143,7 +143,12 @@ def review_work(request, work_id):
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
-            work = form.save()
+            
+            f = ReviewForm(request.POST)
+            new_review = f.save(commit=False)
+            new_review.work = work
+            new_review.save()
+
             messages.success(request, 'successfully reviewed work!')
             return redirect(reverse('work_item', args=[work.id]))
         else:
