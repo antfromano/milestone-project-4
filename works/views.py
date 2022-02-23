@@ -141,9 +141,9 @@ def review_work(request, work_id):
     """Review a work in the store"""
     work = get_object_or_404(Work, pk=work_id)
     if request.method == 'POST':
-        form = ReviewForm(request.POST, request.FILES, instance=work)
+        form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            work = form.save()
             messages.success(request, 'successfully reviewed work!')
             return redirect(reverse('work_item', args=[work.id]))
         else:
