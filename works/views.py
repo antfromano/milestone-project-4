@@ -139,6 +139,7 @@ def delete_work(request):
 @login_required
 def review_work(request, work_id):
     """Review a work in the store"""
+    
     work = get_object_or_404(Work, pk=work_id)
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES)
