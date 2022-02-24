@@ -13,19 +13,6 @@ class WorkAdmin(admin.ModelAdmin):
 
     ordering = ('content',)
 
-"""
-class ReviewAdmin(admin.ModelAdmin):
-    list_display = (
-        'work',
-        'user_rating',
-        'comment',
-        'user',
-        'created_on',
-    )
-
-    ordering = ('work',)
-"""
-
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
         'work',
