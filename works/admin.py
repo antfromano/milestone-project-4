@@ -21,11 +21,6 @@ class ReviewAdmin(admin.ModelAdmin):
         'user',
         'created_on',
     )
-    list_filter = ('active', 'created_on')
-    actions = ['approve_comments']
-
-    def approve_comments(self, request, queryset):
-        queryset.update(active=True)
 
 admin.site.register(Work, WorkAdmin)
 admin.site.register(Content)

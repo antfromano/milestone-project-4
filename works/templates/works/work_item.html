@@ -91,14 +91,35 @@
             </div>
         </div>
     </div>
-        <!-- comments section --> 
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <small class="text-left text-muted">
-                <p class="mt-1">comments:</p>
-            </small>
-                {% for i in all_reviews %}
-                <a class="text-muted font-italic">{{i.user}} "{{i.comment }}" </a>
-                {% endfor %}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-8 card mb-2 mt-1 ">
+            <div class="card-body">
+              <!-- reviews -->
+              {% if all_reviews.count %}
+                    {% if all_reviews.count == 1 %}
+                        <p class="mt-1 text-success">{{ all_reviews.count }} review</p>
+                    {% else %}
+                        <p class="mt-1 text-success">{{ all_reviews.count }} reviews</p> 
+                    {% endif %}                 
+              {% else %}
+                <p class="mt-1 text-success">no reviews</p>
+              {% endif %}
+              {% for review in all_reviews %}
+              <div class="reviews" style="padding: 2px;">
+                <small class="font-weight-bold text-danger">
+                  {{ review.user }}
+                  <span class="text-primary font-weight-normal">
+                    {{ review.created_on }}
+                  </span>
+                </small>
+                <small class="text-muted">
+                    <i class="fas fa-star mr-1"></i>{{ review.user_rating }} / 5{{ review.comment | linebreaks }}
+                </small>
+              </div>
+              {% endfor %}
             </div>
+          </div>
         </div>
+    </div> 
 {% endblock %}
