@@ -22,4 +22,4 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields = ('user_rating', 'comment',)
+        fields = ('user','user_rating', 'comment',)

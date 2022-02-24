@@ -13,6 +13,18 @@ class WorkAdmin(admin.ModelAdmin):
 
     ordering = ('content',)
 
+"""
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = (
+        'work',
+        'user_rating',
+        'comment',
+        'user',
+        'created_on',
+    )
+
+    ordering = ('work',)
+"""
 
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
@@ -20,11 +32,13 @@ class ReviewAdmin(admin.ModelAdmin):
         'user_rating',
         'comment',
         'user',
-        'created_at',
+        'created_on',
     )
+    list_filter = ('active', 'created_on')
+    actions = ['approve_comments']
 
-    ordering = ('work',)
-
+    def approve_comments(self, request, queryset):
+        queryset.update(active=True)
 
 admin.site.register(Work, WorkAdmin)
 admin.site.register(Content)
