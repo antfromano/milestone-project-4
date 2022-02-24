@@ -13,15 +13,18 @@ class WorkAdmin(admin.ModelAdmin):
 
     ordering = ('content',)
 
+
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
         'work',
         'user_rating',
         'comment',
+        'user',
         'created_at',
     )
 
     ordering = ('work',)
+
 
 admin.site.register(Work, WorkAdmin)
 admin.site.register(Content)

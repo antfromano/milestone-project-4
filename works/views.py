@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.contrib.auth.models import User
 from .models import Work, Content, Review
 from .forms import WorkForm, ReviewForm
 from decimal import Decimal
@@ -141,6 +142,7 @@ def review_work(request, work_id):
     """review a work in the store"""
     
     work = get_object_or_404(Work, pk=work_id)
+    user = request.user
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
@@ -148,6 +150,7 @@ def review_work(request, work_id):
             f = ReviewForm(request.POST)
             new_review = f.save(commit=False)
             new_review.work = work
+            new_review.user = user
             new_review.save()
 
             messages.success(request, 'successfully reviewed work!')

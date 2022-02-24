@@ -5,7 +5,6 @@ from django.db.models import Sum
 from django.conf import settings
 
 from works.models import Work
-from milestone_project_4.settings import STANDARD_DELIVERY_PERCENTAGE
 from profiles.models import UserProfile
 
 
