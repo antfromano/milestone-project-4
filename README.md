@@ -160,7 +160,7 @@ Lighthouse was also used to validate the project for performance, accessability,
 -   Add work, edit work and inputs are sometimes not immediately displayed.
 -   As these are unique and one of a kind items, sold items are aren't available for purchase and would need to be refreshed with new items to keep store open.
 -   On very wide screens some forms and tables aren't fully centered.
--   Nested form element error on work_item.html left unresolved due to time constraints unfortunately as it did not affect displaying of page.
+-   Div and form element validator errors on work_item.html left unresolved due to time constraints as it did not adversely affect display of page.
 
 ## Deployment
 
