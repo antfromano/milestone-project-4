@@ -62,7 +62,7 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <div class="form-group w-75" method="GET"> 
+                                <form class="form-group w-75" method="GET"> 
                                     <!-- work availability -->                                    
                                     {% if work.is_sold %}
                                     <div><p class="text-red-alt mb-0">sold - new items arriving shortly</p>    
@@ -70,7 +70,7 @@
                                     <div><p class="text-green-alt mb-0">available</p> 
                                     {% endif %}                                                                       
                                     </div>
-                                </div>
+                                </form>
                             </div>
                             <!-- explore works and add to shopping cart buttons --> 
                             <div class="col-12">

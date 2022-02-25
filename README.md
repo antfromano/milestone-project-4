@@ -19,12 +19,20 @@ Designed to provide a simple experience for people to purchase unique art while 
 
         2. As a customer, I want a simple user interface and functional interactivity.
         ![Alt text](img/singleworkscreenshot.jpg)
+
+        3. As a customer, I want to rate and leave comments on the artwork.
+        ![Alt text](img/reviewscreenshot.JPG)
         
-        3. As a customer, I want a recognizable and secure checkout experience.
+        4. As a customer, I want a recognizable and secure checkout experience.
         ![Alt text](img/checkoutscreenshot.jpg)
 
-        4. As a customer, I want an order summary and confirmation.
+        5. As a customer, I want an order summary and confirmation.
         ![Alt text](img/ordersummaryscreenshot.jpg)
+
+    -   #### Store Owner
+
+        1. As the store owner, I want to easily edit and delete available artwork.
+        ![Alt text](img/editworkscreenshot.JPG)
 
 -   ### Design
     -   #### Color Scheme
@@ -46,7 +54,8 @@ Designed to provide a simple experience for people to purchase unique art while 
 
 ## Features Left to Implement/Other Feature Ideas
 
--   Customer ability to leave ratings and reviews of art pieces was not implemented due to time constraints complicated by miscommunication between virtual collaborators.
+-   Implement "Are you sure you want to delete?" functionality for store owners.
+-   Ratings and comments superuser approval functionality.
 
 ## Technologies
 
@@ -103,18 +112,31 @@ Lighthouse was also used to validate the project for performance, accessability,
         2. Each page is laid out evenly and works cleanly when the images and art content are clicked and the cart is updated when artwork is added.
         3. The ancraft title allows the customer to view all works any time they wish.
 
-    3. As a customer, I want a recognizable and secure checkout experience.
+    3. As a customer, I want to rate and leave comments on the artwork.
+        1. The review button is front and center and easily recognizable.
+        2. The ratings and comments form is simple and user friendly.
+        3. After reviewing the work the customer is redirected back to the work review to view their rating and comments.
+
+    4. As a customer, I want a recognizable and secure checkout experience.
         1. The colors and contrasts utilized make the text and buttons stand out.
         2. Flash messages confirm inputs, edits and deletes
         3. The colorful combinations and highlights add to the user experience.
     
-    4. As a customer, I want an order summary and confirmation.
+    5. As a customer, I want an order summary and confirmation.
         1. Upon checking out, customers are given and order summary and confirmation.
         2. The specifics of the order are neatly and recognizably organized.
         3. When returning to the site, registered users can access their order history.
 
+-   #### Store Owner Goals
+
+    1. As the store owner, I want to easily edit and delete available artwork.
+        1. The edit and delete buttons are visible on the multiple and singular artwork pages.
+        2. The edit a work form is simple with appropriate fields neatly formatted.
+        3. Upon updating work, store owner is is redirected back to the work to view their updates.
+
 ### Further Testing
 
+-   Tested all features on the application to ensure that functionality is fully working.
 -   Tested on Google Chrome, Internet Explorer and Microsoft Edge.
 -   Viewed on variety of devices such as Desktop, Chromebook and Pixel 3a XL.
 -   Testing was done to ensure that all pages linked correctly.
@@ -126,7 +148,6 @@ Lighthouse was also used to validate the project for performance, accessability,
 -   Add work, edit work and inputs are sometimes not immediately displayed.
 -   As these are unique and one of a kind items, sold items are aren't available for purchase and would need to be refreshed with new items to keep store open.
 -   On very wide screens some forms and tables aren't fully centered.
--   Time constraints did not allow for full featured README.md file, implementation of ratings/review features, external email functionality, customer information validation, or fully cleaning up and commenting out code.
 
 ## Deployment
 
