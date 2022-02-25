@@ -41,6 +41,43 @@ Designed to provide a simple experience for people to purchase unique art while 
         -   Balsamiq Sans font is the main font used throughout the whole website.
     -   #### Imagery
         -   Utilized Python, HTML, Python, and CSS.
+    -   #### Data Schema
+
+        -   Using Django provides many benefits in the development of this app. Its flexible schema makes it easy to evolve and store data in a way that is easy to work with. Django is also built to scale up quickly and supports all the main features of modern databases such as transactions.
+        
+        - Categories
+
+                {   
+                    "_id": ObjectId
+                    "category_name": String
+                }
+
+        - Users
+
+                {   "first_name": String
+                    "last_name": String
+                    "username": String 
+                    "password": String
+                }
+
+        - status
+
+                {   
+                    "_id": ObjectId
+                    "status": String (PK)
+                }
+
+        - projects
+
+                {
+                    "_id": ObjectId
+                    "category_name": String
+                    "project_name": String
+                    "project_description": String
+                    "is_urgent": String 
+                    "due_date": Date
+                    "status_name": String
+                }
 
 *   ### Wireframes
 
