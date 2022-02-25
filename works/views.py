@@ -155,7 +155,7 @@ def review_work(request, work_id):
 
             messages.success(request, 'successfully reviewed work!')
             return redirect(reverse('work_item', args=[work.id]))
-            
+         
         else:
             messages.error(request, 'failed to review work. please ensure the form is valid.')
     else:
