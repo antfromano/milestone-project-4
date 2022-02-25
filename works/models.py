@@ -4,7 +4,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Content(models.Model):
-
+    """ content in work such as animals, flowers, fruit, landscapes, etc."""
     class Meta:
         verbose_name_plural = 'Contents'
 
@@ -15,7 +15,7 @@ class Content(models.Model):
 
 
 class Work(models.Model):
-
+    """ artwork """
     class Meta:
         verbose_name_plural = 'Works'
 
@@ -32,7 +32,7 @@ class Work(models.Model):
 
 
 class Review(models.Model):
-
+    """ reviews """
     class Meta:
         verbose_name_plural = 'Reviews'
 
