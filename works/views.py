@@ -126,7 +126,7 @@ def edit_work(request, work_id):
 
 
 @login_required
-def delete_work(request):
+def delete_work(request, work_id):
     """ Delete a work from the store """
     if not request.user.is_superuser:
         messages.error(request, 'sorry, only store owners can do that.')
