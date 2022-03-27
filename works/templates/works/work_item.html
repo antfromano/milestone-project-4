@@ -80,8 +80,8 @@
                                     </span>
                                     <span class="text">explore works</span>
                                 </a>
-                                    {% if not work.is_sold %}                                
-                                    <input type="submit" class="btn btn-primary rounded-0 text mt-5" value="add to shopping cart" data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
+                                    {% if not work.is_sold %}
+                                    <input type="submit" class="btn btn-primary rounded-0 text mt-5" value="add to shopping cart">
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}" data-item_id="{{ work.id }}" id="id_qty_{{ work.id }}">
                                     {% endif %}
                             </div>
