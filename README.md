@@ -1,6 +1,6 @@
 <h1 align="center">Milestone Project 4 - ancraft - Ant Romano</h1>
 
-[View the live project here](https://mp4ancraft.herokuapp.com/works/)
+(live project currently under construction due to changes in free databases and hosting offered during coursework.)
 
 An art ecommerce website designed using Python, HTML, CSS, JavaScript, Bootstrap, Django, Stripe, Heroku and Amazon S3 to highlight skills learned during Full Stack Software Development coursework.
 
